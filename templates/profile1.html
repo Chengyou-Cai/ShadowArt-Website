@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国皮影戏--秦大师</title>
+    <link rel="stylesheet" href="{% static "css/profiles1.css" %}">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css" %}">
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <!-- boorstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<!-- themify-icon.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/themify-icons.css" %}">
+	<!-- owl-carousel -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}">
+	<!-- light-box -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/lightbox.css" %}">
+	<!-- menu.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/menu.css" %}">
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<!-- responsive.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/responsive.css" %}">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+  <div class="head" style="z-index:1; color: #777;">
+      <div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+      <div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+          <ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1%}">资讯</a>
+              </li>
+			  {% if user.is_authenticated %}
+			  <li style="margin: 0 15px;">
+				<a href="{% url 'logout' %}">登出</a>
+			</li>
+			   {% else %}
+					 <li style="margin: 0 15px;">
+				<a href="{% url 'login' %}">登陆</a>
+			</li>
+			  {% endif %}
+          </ul>
+      </div>
+      <div class="link" style="padding: 0px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+  </div>
+   <!-- Start of blog sinlge content
+		============================================= -->
+		<section id="blog-single" class="blog-single-content pt90" style="background-color:#f4f4f4;">
+			<div class="container">
+				<div class="row">
+					<div class="blog-single-content">
+						<div class="row">
+							<div class="col-sm-9">
+
+								<div class="blog-single-right-side">
+
+									<div class="blog-main-link deep-black mt20">
+										<h2><a href="#">秦大师作为湖北省的中国影子大师之一，可谓是万事通。</a></h2>
+									</div>
+									<!-- //.blog-main-link -->
+
+
+									<div class="blog-meta mt10  ul-li">
+										<ul class="meta-list">
+											<li><a href="#">2019/8/26 </a></li>
+											<li><a href="#">  秦大师 /  </a></li>
+											<li><a href="#">湖北省</a></li>
+										</ul>
+									</div>
+									<!-- //.blog-meta -->
+									<div class="blog-single-main-img">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper"></div>
+                                            <!-- Add Pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            <!-- Add Arrows -->
+                                            <div class="swiper-button-next swiper-button-black"></div>
+                                            <div class="swiper-button-prev swiper-button-black"></div>
+                                        </div>
+									</div>
+
+									<div class="blog-single-text mt30">
+										<span>我没有来湖北的打算。因为它被困在大陆中部某个奇怪的地方。相反，
+                                            在去了云南之后，我打算北上回到成都，完成更多的博物馆工作。然而，
+                                            随着我去成都皮影戏博物馆的便利程度发生了变化，在我不得不回
+                                            到北京之前，我有一周的空闲时间。我拿出我的联系人名单和一张中国省级地图。如果我走陆路，湖北正好在从云南到
+                                            北京的回家路上。 从腾冲到昆明要坐12个小时的公共汽车，然后再坐30个小时的火车到武汉。
+                                            从那里，再坐一小段火车到孝感小镇，然后坐一个小时的车到更小的云梦镇。
+                                            当我终于到达时，我想做的就是冲个很浪费的美式淋浴，然后睡上一天的午觉，
+                                            但我却直接开着车去了秦师傅的茶馆接他。</span>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-text mt20">
+										<span>我们到达的这栋三层楼高的平房，它坐落在一条古老的步行街上，距离我入住的
+                                            酒店只有五分钟的车程。房顶上是一个很普通的牌子，右边有一块小黑板，
+                                            上面写着今天的节目。里面，一个9米乘9米的房间里挤满了大约75位老人，
+                                            他们基本都抽着香烟。其中一半人在看皮影戏，另一半人在打牌或和朋友聊天。</span>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-text mt30 row">
+										<div class="col-sm-5">
+											<img src="{% static "image/pe1.webp"%}" alt="image" style="width:400px;height:300px;">
+										</div>
+										<div class="col-sm-7">
+											<span class="pt50 table-display">在你进门之前，你就能感觉到里面的舒适。这群人每天都来，坐几个小时。
+                                                秦师傅经营这家茶馆大约
+                                                有30年了。他是在乡村演出被越来越少的人欣赏之后开始经营这件茶馆的。他每天下午11:30-2:30表演
+                                                (是的，周日也是)。对于短篇小说，可能需要几周的日常节目才能完成。对于长篇故事，
+                                                可能需要三个多月的时间。门票只要10元</span>
+										</div>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-quate mt60">
+										<blockquote>
+											这个地方本身没什么可说的:粗糙的水泥地面，简单的长椅，椅背上放着放茶杯的架子，墙
+                上什么都没有，房顶上还有一大堆吊扇等着夏天的到来。他们只供应茶和热水。舞台离地面只有几十厘米，观众可以从舞台右侧的一个小门口进入。后台就像一个杂乱的鞋盒，几平米的空间几乎不
+                够容纳所有的演出者、乐器和木偶。每个可用的角落都塞满了东西。
+										</blockquote>
+									</div>
+									<!-- // .blog-single-quate -->
+
+									<div class="blog-single-text mt20">
+										<span>“我的翡翠城啊，在这漫长的道路尽头，这是何等的奖赏啊!”我因疲惫和兴奋而神志不清
+                                            。这是我曾经希望存在的地方，但还没有想象出来它到底是什么样子的。如果传统皮影戏向城市转型还没
+                                            有结束，那么这肯定是一个短暂的转折点。每天积极表现，以社区体验为中心。是的，
+                                            顾客大多是60岁以上的老人，我能感觉到，这有一定的道理。</span>
+									</div>
+									<!-- // .blog-single-text -->
+                                    <div class="blog-single-text mt20">
+										<span> 接下来的四天，我都会来到茶馆，从晚上11点到3点，坐在那里看戏。起初，人群对我和我
+                                            年轻的美国女性身份很警惕。但当他们看到我的脸几个下午后，他们的目光变成了微笑和好奇。
+                                            我递给他们南瓜籽当零食吃，还给了他们一杯啤酒。甚至有人问我是否想和他们打牌。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span>每天结束的时候，我都会被邀请到楼上他们家的起居处，我们会共享一顿迟到的午餐。秦师傅和他
+                                            的妻儿围坐在一张摇摇晃晃的牌桌旁，坐在粉红色的塑料凳子上，紧张地吃着。他们很安静，
+                                            或者说，在楼下茶馆的当当声和嗡嗡声之后，他们看起来很安静。有时我们看旧相册，有时我看
+                                            大师切木偶，有时我只是和他们聊天。我一直反复告诉师父他的茶馆有多棒。他似乎对此非常
+                                            高兴，我想知道他是否知道这是多么神奇的自己。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span>这里的学习对我来说是无止境的。即使我厌倦了坐在硬板凳上，我的好奇心也会带着我。通常
+                                            ，我很荣幸看到一个持续1个多小时的传统节目。在这里，我可以每天来看3个小时。这些节目不
+                                            是我们西方人习惯看的。这些节目不是15分钟的节目，而是类似于过去10个小时
+                                            的夜间影子节目。行动进展缓慢，而且经常重复。你可以通过看节目来打发时间，听一个故事，并融
+                                            入其中。</span>
+									</div>
+                                    <div class="blog-single-text mt20">
+										<span> 重读这一周的手写笔记，我被自己的观察所打动。在我的想象中会出现这样的场景:一幅观众帽子分类的图画，
+                                            关于木偶师如何与乐手交流即兴场景的说明，以及他们如何靠10元门票谋生的快速猜测。然而，
+                                            更出乎意料的是，我的笔记本里充满了对现场表演的氛围、社区和共同体验的凝聚力的印象。房间里
+                                            充满了弯曲的脊椎，没有牙齿的笑声和温暖的友谊。</span>
+									</div>
+                                    <div class="blog-single-text mt20">
+										<span>今天外面下雨了，这整个星期都是这样。随着即将到来的季节，外面变得越来越冷，房间里会比较舒适，
+                                            且比较明亮。最后一天，我在晚上时被带去吃了一顿丰盛的晚餐。经营新茶馆的一个商人问我:“你看得
+                                            还不够多吗?”“不，”我回答，“差得很远。”</span>
+									</div>
+
+
+									<div class="blog-share ul-li mt60">
+										<span class="share-it text-uppercase deep-black pull-left">
+                                            <a href="{% url "profiles" %}" class="a1" style="font-size: 18px;"> <img src="{% static "image/返回.png"%}" style="width:20px;height:20px;">返回</a>
+                                        </span>
+									</div>
+									<!-- //.blog-share -->
+								</div>
+								<!-- //.blog-single-right-side -->
+
+
+								<div class="blog-single-comment pt90">
+
+									<div class="comment-form-list">
+										<div class="comment-form-list-pic-text">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">山顶洞人阿里</span>
+												<span class="author-date">2019年7月15日</span>
+												<span class="author-dec">中国皮影艺术，深受国内外热爱民俗文化人士的喜爱。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+										<!-- //.comment-form-list-pic-text -->
+
+										<div class="comment-form-list-pic-text ">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">翠喜儿</span>
+												<span class="author-date">2019年7月20日</span>
+												<span class="author-dec">皮影是我小时候的记忆了，现在住在城市，真的是很难看到了，也只有这些老艺术家一直在坚持，我真的很怀念小时候看皮影的日子。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="comment-form-list-pic-text">
+
+										<!-- //.img -->
+										<div class="author-text">
+											<span class="author-name deep-black">融小信</span>
+											<span class="author-date">2019年8月10日</span>
+											<span class="author-dec">这些皮影人偶着的太精致了，我如果能有一个就好了。</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+										</div>
+									</div>
+
+
+                                        {% for comment in comments %}
+                                            <div class="comment-form-list-pic-text">
+                                            <span class="author-name deep-black">{{ comment.posted_by }}</span>
+											<span class="author-date">{{ comment.create_time }}</span>
+											<span class="author-dec">{{ comment.comment }}</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+                                            </div>
+                                        {% endfor %}
+
+									<!-- //.comment-form-list-pic-text -->
+
+									<div class="blog-single-comment-head text-capitalize  pt90">
+										<h3 class="title-head deep-black">发表你的想法</h3>
+									</div>
+
+									<div class="comment-form mt50 ">
+{#										<form action="#" class="clearfix">#}
+{#											<div class="input-field-wrapper">#}
+{##}
+{#											</div>#}
+{#											<div class="clear-fix my-comment-box">#}
+{#												<label for="textarea1"  style="font-size:18px;">内容</label>#}
+{#												<textarea id="textarea1" name="#" cols="30" rows="10"></textarea>#}
+{#											</div>#}
+{#											<button type="submit" class="popin-btn" style="font-size:20px;">发表</button>#}
+{#										</form>#}
+                    {% if user.is_authenticated %}
+                          <form method="POST" action="{% url 'comment' num %}">
+                            {% csrf_token %}
+                            <input type="text" name="comment" style="width: 800px; height: 145px;">
+                            <button type="submit" class="popin-btn" style="font-size:20px;">发表</button>
+                          </form>
+                        {% else %}
+                          <p><a href="{% url 'login' %}">登陆后</a> 发表评论</p>
+                        {% endif %}
+                                        </div>
+								</div>
+								<!-- //.blog-single-comment -->
+
+							</div><!--  /.col-sm-9 -->
+
+
+							<div class="col-sm-3">
+								<div class="blog-single-right-side-bar">
+
+									<!-- /.blog-search  -->
+
+
+
+									<!-- //.blog-single-right-side-content -->
+
+
+
+									<div class="blog-single-right-side-content mt50">
+										<div class="blog-single-side-title text-capitalize">
+											<h2 class="widgettitle deep-black">推荐阅读</h2>
+										</div>
+										<!-- //.widgettitle -->
+
+										<div class="recent-post-list mt30">
+											<div class="recent-blog-item">
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t3.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 2 %}">中国皮影戏——鲁家</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/23</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t4.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 3 %}">中国皮影戏——王燕</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/20</a> </li>
+														</ul>
+													</div>
+												</div>
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t5.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 4 %}">中国皮影戏——腾冲皮影剧团</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/15</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t6.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="#">中国皮影戏——范师傅</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i>2019/7/3</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+											</div>
+										</div>
+
+									</div>
+									<!-- //.blog-single-right-side-content -->
+									<!-- //.blog-single-right-side-content -->
+
+								</div>
+								<!-- //.blog-single-right-side-bar -->
+							</div>
+							<!--  /.col-sm-3 -->
+
+
+						</div><!--  /.row -->
+					</div><!-- //.blog-single-content -->
+				</div><!--  /.row -->
+			</div><!--  /.container -->
+		</section>
+	<!-- End of blog single content
+		============================================= -->
+    <script>
+            var appendNumber = 10;
+            var prependNumber = 1;
+            var swiper = new Swiper('.swiper-container', {
+              slidesPerView: 3,
+              centeredSlides: true,
+              spaceBetween: 30,
+              pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+              },
+              virtual: {
+                slides: (function () {
+                  var slides = [];
+                  for (var i = 2; i < 6; i += 1) {
+                    slides.push('<a href=""><img src=/static/image/pre'+i+'.webp></a>')
+                  }
+                  return slides;
+                }()),
+              },
+              autoplay: {
+                  delay: 1000,
+               },
+               autoResize: false,
+
+            });
+
+
+    </script>
+</body>
+
+</html>

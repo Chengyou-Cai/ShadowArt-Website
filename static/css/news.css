@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f4f4f4;
+    font-family: Martel,serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+.head{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #f4f4f4;
+    color: #777;
+    /* border-bottom: 5px solid #e4d9ae; */
+}
+
+.hd-logo{
+    float: left;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0 0 50px;
+}
+.navigation{
+    width: 1000px;
+    font-size: 22px;
+    padding: 30px 0 15px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.navigation ul{
+    list-style: none;
+}
+.navigation ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.navigation ul li a{
+    color: #777;
+    text-decoration: none;
+}
+.navigation ul li a:hover{
+    color: #a00;
+    text-decoration: none;
+}
+.link{
+    float: right;
+    font-size: 22px;
+    padding: 28px 0 15px;
+    margin: -71px 50px 0 0;
+}
+.link a{
+    color: #777;
+    text-decoration: none;
+}
+.link a:hover{
+    color: #a00;
+}
+.content{
+    /* margin: 0 50px; */
+    padding:0 0 0 0;
+    width:100%;
+    /* border: 1px solid #c36a2d; */
+}
+.con1{
+    padding:75px 0 0 0;
+}
+.content1{
+    background-color: #F4F4F4;
+    width:50%;
+    height:900px;
+    float:left;
+}
+.content2{
+    background-color: #f4f4f4;
+    width:50%;
+    height:900px;
+    float:left;
+    margin-top:80px;
+}
+.img-border{
+    width:60%;
+    margin:0 auto;
+    height:600px;
+    margin-top:15%;
+}
+.img{
+    width:100%;
+    height:100%;
+    border:4px solid #777;
+}
+.nav2{
+    margin:10px 0 0 0;
+}
+.nav2 ul{
+    list-style: none;
+    font-size:40px;
+}
+.nav2 ul li{
+    margin-bottom: 50px;
+}
+.nav2 ul li a{
+    font-family:"楷体";
+    color:#222;
+    text-decoration: none;
+}
+.nav2 ul li a:hover{
+    color:#222;
+    font-weight:800;
+}
+.nav2 p{
+    font-size:25px;
+    color:#222;
+    margin-bottom: 60px;
+} 
+.btn{
+    border-top-color: #E2C275;
+    border-bottom-color: #E2C275;
+    border-left: none;
+    border-right:none;
+    width:70px;
+    height:40px;
+    background-color: #f4f4f4;
+}
+.btn1{
+    float:right;
+    margin-right:10%;
+    margin-top:-10%;
+}
+.btn:focus{
+    outline: none auto 0px;
+    outline-color: none;
+    outline-style: auto;
+    outline-width: 0px;
+}
+.h1{
+    font-size:40px;
+    color:#222;
+    margin-bottom:30px;
+}
+.l1{
+    font-size:30px;
+    color:#222;
+}
+.swiper-container {
+    width: 900px;
+    height: 250px;
+    margin:20px 0;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+  .swiper-slide {
+    width: 280px !important;
+    text-align: center;
+    font-size: 18px;
+    background: #f4f4f4;
+    margin-right:30px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    
+  }
+
+.swiper-button-next{
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    right:0px;
+    /* left: 10px; */
+    padding: 0px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+}
+.swiper-button-prev {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    right:0px;
+    padding: 0px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+}
+.img2{
+    width:280px;
+    height:250px;
+}
+/* .lunbo{
+    float: left;
+}
+.lunbo .bx-wrapper{
+    max-width: 100%;
+    margin: 10px 0 20px 0;
+} 
+.lunbo img{
+    height: 140px !important;
+} */
+.message{
+    margin-top:60px;
+    width:55%;
+    float:left;
+}
+.message p{
+    font-size:20px;
+    color:#222;
+    margin-bottom:20px;
+}
+.location{
+    float:left;
+    width:35%;
+    margin-top:60px;
+}
+.location img{
+    width:90%;
+    height:250px;
+    margin:0 auto;
+    border:3px solid #777;
+}
+.nav2 button{
+    float:right;
+    margin-right:10%;
+}
+.icon{
+    float:right;
+    margin-right:5%;
+    height:40px;
+    width: 40px;
+}
+.icon img{
+    height:100%;
+    width:100%;
+}

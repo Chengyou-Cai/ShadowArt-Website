@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国皮影戏--艺术风格</title>
+    <link rel="stylesheet" href="{% static "css/art.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script> -->
+
+    <!-- 图标 -->
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css"%}">
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css"%}">
+</head>
+<body>
+     <!-- 导航栏 -->
+    <div class="head" style="z-index:1; color: #777;">
+      <div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+      <div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+          <ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+              {% if user.is_authenticated %}
+                <li style="margin: 0 15px;">
+                  <a href="{% url 'logout' %}">登出</a>
+              </li>
+                 {% else %}
+                       <li style="margin: 0 15px;">
+                  <a href="{% url 'login' %}">登陆</a>
+              </li>
+                {% endif %}
+          </ul>
+      </div>
+      <div class="link" style="padding: 30px 0 15px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+  </div>
+  <!-- 导航栏 -->
+ <div class="content">
+        <div class="content1">
+            <div class="con1" id="con2">
+                 <div class="img-border" style="display: none;" >
+                    <img src="{% static "image/girl.png"%}" alt="1" class="img" style="border:4px solid #ba1b21">
+                </div>
+                <div class="img-border" style="display: block;" >
+                    <img src="{% static "image/dt1_.png"%}" alt="1" class="img">
+                </div>
+                <div class="img-border" style="display: none;" >
+                    <img src="{% static "image/dt2_.png"%}" alt="1" class="img">
+                </div>
+                <div class="img-border" style="display:none;" >
+                    <img src="{% static "image/dt3_.png"%}" alt="1" class="img">
+                </div>
+                <div class="img-border" style="display:none;" >
+                    <img src="{% static "image/dt4_.png"%}" alt="1" class="img">
+                </div>
+                <div class="img-border" style="display:none;">
+                    <img src="{% static "image/dt5_.png"%}" alt="1" class="img">
+                </div>
+                <div class="img-border" style="display:none;" >
+                    <img src="{% static "image/dt4_.png"%}" alt="1" class="img">
+                </div>
+                <div class="img-border" style="display:none;">
+                    <img src="{% static "image/dt5_.png"%}" alt="1" class="img">
+                </div>
+            </div>
+        </div>
+        <div class="content2">
+            <div class="con1" id="con1">
+                <div class="nav2" style="display: block;" id="nav1">
+                    <p style="margin-top:70px;">皮影戏的主要分布地区及其特点</p>
+                    <ul>
+                        <li><a href="#" >中国中北部</a></li>
+                        <li><a href="#" >中国东北</a></li>
+                        <li><a href="#" >中国西部</a></li>
+                        <li><a href="#" >中国西南部</a></li>
+                        <li><a href="#" >中国中部</a></li>
+                        <li><a href="#" >中国东南部</a></li>
+                        <li><a href="#" >现代美学</a></li>
+                    </ul>
+                </div>
+                    <div class="nav2" style="display: none;" >
+                        <div class="icon" onclick="show()">
+                            <img src="{% static "image/返回.png"%}" alt="">
+                        </div>
+                        <h1 class="h1">中国中北部</h1>
+                        <label class="l1">陕西省，山西省，甘肃省及周边地区</label>
+                        <!-- <div class="image">
+                            <img src="../image/zb1.webp" alt="1" class="img2">
+                            <img src="../image/zb2.webp" alt="2" class="img2">
+                            <img src="../image/zb3.webp" alt="3" class="img2">
+                            <img src="../image/zb4.webp" alt="4" class="img2">
+                        </div> -->
+                        <div class="swiper-container" id="swiper1" style="height: 220px">
+                                <div class="swiper-wrapper">
+                                </div>
+                                 <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next swiper-button-black"></div>
+                                <div class="swiper-button-prev swiper-button-black"></div>
+                        </div>
+                        <div class="location">
+                            <img src="{% static "image/pre12.webp"%}" alt="4" >
+                        </div>
+                        <div class="message">
+                            <p style="font-size:25px;font-weight: 400;">
+                                设计特点：
+                            </p>
+                            <p >
+                                作为中国历史最悠久的影子木偶审美，北方中央风格的特点是其无与伦比的复杂设计和切割精通。
+                                木偶的轮廓由尖尖的鼻子，高而圆的前额以及嘴的大小和位置表示。
+                                这些木偶大约12-14英寸高，最常用的是牛皮制成，皮影造型俊俏大方，外轮廓挺拔概括；携刻精细流畅，重视图案的装饰效果；着色对比强烈，活泼明快；影人肢体部分之间的组合、分解合理，因而表演十分灵活，充分体现了粗中有细、豪放有致的艺术风格。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nav2" style="display: none;" >
+                        <div class="icon" onclick="show()">
+                            <img src="{% static "image/返回.png"%}" alt="">
+                        </div>
+                            <h1 class="h1">中国东北
+                            </h1>
+                            <label class="l1">河北省及辽宁省及周边地区</label>
+                            <!-- <div class="image">
+                                <img src="../image/db1.webp" alt="1" class="img2">
+                                <img src="../image/db2.webp" alt="2" class="img2">
+                                <img src="../image/db3.webp" alt="3" class="img2">
+                                <img src="../image/db4.webp" alt="4" class="img2">
+                            </div> -->
+                            <div class="swiper-container" id="swiper2">
+                                    <div class="swiper-wrapper">
+                                    </div>
+                                     <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next swiper-button-black"></div>
+                                    <div class="swiper-button-prev swiper-button-black"></div>
+                            </div>
+                            <div class="location">
+                                <img src="{% static "image/pre13.webp" %}" alt="4" >
+                            </div>
+                            <div class="message">
+                                <p style="font-size:25px;font-weight: 400;">
+                                            设计特点：
+                                </p>
+                                <p >
+                                        这种美学在20世纪初被东京风格所吸引，但在文化大革
+                                        命禁令中几乎被彻底根除 。从那以后，这种美学大多留
+                                        在首都以东的湖北农村。它的特点是直的，倾斜的轮廓和
+                                        强大的线条。这些木偶通常由驴和牛皮制成，高度在12-2
+                                        0英尺之间，取决于剧团和木偶的创作时间。冀南皮影戏亦无剧本，属于宋代中原影戏一支嫡脉，较多地保持着我国皮影戏的早期面貌，其造型粗犷古朴、线条简练、雕绘结合，充分体现着古代中原影戏的造型特征、体现着我国皮影戏的早期特征。
+
+                                </p>
+                            </div>
+                    </div>
+                    <div class="nav2" style="display: none;" >
+                        <div class="icon" onclick="show()">
+                            <img src="{% static "image/返回.png"%}" alt="">
+                        </div>
+                            <h1 class="h1">中国西部</h1>
+                            <label class="l1">四川省和成都市，青海省及周边地区</label>
+                            <!-- <div class="image">
+                                <img src="../image/xb1.webp" alt="1" class="img2">
+                                <img src="../image/xb2.webp" alt="2" class="img2">
+                                <img src="../image/xb3.webp" alt="3" class="img2">
+                                <img src="../image/xb4.webp" alt="4" class="img2">
+                            </div> -->
+                            <div class="swiper-container" id="swiper3">
+                                    <div class="swiper-wrapper">
+                                    </div>
+                                     <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next swiper-button-black"></div>
+                                    <div class="swiper-button-prev swiper-button-black"></div>
+                            </div>
+                            <div class="location">
+                                <img src="{% static "image/pre14.webp"%}" alt="4" >
+                            </div>
+                            <div class="message">
+                                    <p style="font-size:25px;font-weight: 400;">
+                                            设计特点：
+                                </p>
+                                <p >
+                                        四川木​​偶具有鲜明的轮廓，让人联想到手和肩的咬合和独特的
+                                        关节工程。四川（省）和成都（国会大厦）都有自己的特色。
+                                        四川木​​偶的大小和风格各不相同，但类似于他们的北方中部邻
+                                        居，而许多成都城市木偶是该国最大的一些，非常华丽 - 配
+                                        有可拆卸的配件。这种差异是成影城在影子木偶流行期间富裕
+                                        的直接结果。 古朴、庄重、典雅、大气的造型特点在中国民间艺术中独树一帜，它美观华丽、雕工精致、线条流畅，设色古朴不失鲜艳，其大气、典雅的特点，给人以智慧和深邃感觉。
+                                </p>
+                            </div>
+                    </div>
+                    <div class="nav2" style="display: none;" >
+                        <div class="icon" onclick="show()">
+                            <img src="{% static "image/返回.png"%}" alt="">
+                        </div>
+                            <h1 class="h1">中国西南部</h1>
+                            <label class="l1">云南省</label>
+                            <!-- <div class="image">
+                                <img src="../image/xl1.webp" alt="1" class="img2">
+                                <img src="../image/xl2.webp" alt="2" class="img2">
+                                <img src="../image/xl3.webp" alt="3" class="img2">
+                                <img src="../image/xl4.webp" alt="4" class="img2">
+                            </div> -->
+                            <div class="swiper-container" id="swiper4">
+                                    <div class="swiper-wrapper">
+                                    </div>
+                                     <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next swiper-button-black"></div>
+                                    <div class="swiper-button-prev swiper-button-black"></div>
+                            </div>
+                            <div class="location">
+                                <img src="{% static "image/pre15.webp" %}" alt="4" >
+                            </div>
+                            <div class="message">
+                                    <p style="font-size:25px;font-weight: 400;">
+                                            设计特点：
+                                </p>
+                                <p >
+                                        云南美学相对年轻，起源于400-600年前，是全国最引人注
+                                        目的美学之一。粗糙，厚实的皮革 - 通常是水牛或牛 -
+                                         决定了更大的木偶，粗糙的切割。从灯光后面看，
+                                         它们与北方中央表兄弟相比看起来很原始。但是，当从后面点
+                                         亮这些木偶时，我已经看到了一些最引人注目的傀儡 - 大胆，
+                                         傲慢，不可能把你的目光从你身上移开。 而腾冲皮影戏几乎集中了剪纸、窗花、门画、工艺美术、雕刻等所有的中国造型艺术和地方戏、相声、口技等传统表演艺术。
+                                </p>
+                            </div>
+                    </div>
+                    <div class="nav2" style="display: none;" >
+                        <div class="icon" onclick="show()">
+                            <img src="{% static "image/返回.png"%}" alt="">
+                        </div>
+                            <h1 class="h1">中国中部</h1>
+                            <label class="l1">湖北，湖南及周边地区</label>
+                            <!-- <div class="image">
+                                <img src="../image/c1.webp" alt="1" class="img2">
+                                <img src="../image/c2.webp" alt="2" class="img2">
+                                <img src="../image/c3.webp" alt="3" class="img2">
+                                <img src="../image/c4.webp" alt="4" class="img2">
+                            </div> -->
+                            <div class="swiper-container" id="swiper5">
+                                    <div class="swiper-wrapper">
+                                    </div>
+                                     <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next swiper-button-black"></div>
+                                    <div class="swiper-button-prev swiper-button-black"></div>
+                            </div>
+                            <div class="location">
+                                <img src="{% static "image/pre16.webp" %}" alt="4" >
+                            </div>
+                            <div class="message">
+                                    <p style="font-size:25px;font-weight: 400;">
+                                            设计特点：
+                                </p>
+                                <p >
+                                        中国中部省份拥有多元化的设计美学，湖南省长沙是最
+                                        独特的。虽然所有其他的影子木偶传统使用直的90度
+                                        轮廓（一些¾转向专业角色的面孔），长沙的木偶传统的
+                                        整体是¾转脸（两只眼睛都可见）。长沙传统还使用纸张，
+                                        彩色半透明蜡纸和彩色塑料的混合物来制作他们的影子木偶。
+                                        虽然有些地区使用纸而不是皮革作为宗教信仰，但长沙当地人
+                                        解释说，为什么他们选择更便宜的材料是经济上的原因。此外它仍保留有宋代影戏的古老形态，与我国其它区域的影戏
+                                        相比，湖南民间影戏最突出的特点是影偶采用多层土纸裱糊成硬纸壳，
+                                        然后刻镂，着色，涂蜡而成。
+                                </p>
+                            </div>
+                    </div>
+                    <div class="nav2" style="display: none;" >
+                            <div class="icon" onclick="show()">
+                                <img src="{% static "image/返回.png"%}" alt="">
+                            </div>
+                                <h1 class="h1">中国中部</h1>
+                                <label class="l1">湖北，湖南及周边地区</label>
+                                <!-- <div class="image">
+                                    <img src="../image/c1.webp" alt="1" class="img2">
+                                    <img src="../image/c2.webp" alt="2" class="img2">
+                                    <img src="../image/c3.webp" alt="3" class="img2">
+                                    <img src="../image/c4.webp" alt="4" class="img2">
+                                </div> -->
+                                <div class="swiper-container" id="swiper5">
+                                        <div class="swiper-wrapper">
+                                        </div>
+                                         <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- Add Arrows -->
+                                        <div class="swiper-button-next swiper-button-black"></div>
+                                        <div class="swiper-button-prev swiper-button-black"></div>
+                                </div>
+                                <div class="location">
+                                    <img src="{% static "image/pre16.webp"%}" alt="4" >
+                                </div>
+                                <div class="message">
+                                        <p style="font-size:25px;font-weight: 400;">
+                                                设计特点：
+                                    </p>
+                                    <p >
+                                            中国中部省份拥有多元化的设计美学，湖南省长沙是最
+                                            独特的。虽然所有其他的影子木偶传统使用直的90度
+                                            轮廓（一些¾转向专业角色的面孔），长沙的木偶传统的
+                                            整体是¾转脸（两只眼睛都可见）。长沙传统还使用纸张，
+                                            彩色半透明蜡纸和彩色塑料的混合物来制作他们的影子木偶。
+                                            虽然有些地区使用纸而不是皮革作为宗教信仰，但长沙当地人
+                                            解释说，为什么他们选择更便宜的材料是经济上的原因。
+                                    </p>
+                                </div>
+                    </div>
+                    <div class="nav2" style="display: none;" >
+                            <div class="icon" onclick="show()">
+                                <img src="{% static  "image/返回.png"%}" alt="">
+                            </div>
+                                <h1 class="h1">中国中部</h1>
+                                <label class="l1">湖北，湖南及周边地区</label>
+                                <!-- <div class="image">
+                                    <img src="../image/c1.webp" alt="1" class="img2">
+                                    <img src="../image/c2.webp" alt="2" class="img2">
+                                    <img src="../image/c3.webp" alt="3" class="img2">
+                                    <img src="../image/c4.webp" alt="4" class="img2">
+                                </div> -->
+                                <div class="swiper-container" id="swiper5">
+                                        <div class="swiper-wrapper">
+                                        </div>
+                                         <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- Add Arrows -->
+                                        <div class="swiper-button-next swiper-button-black"></div>
+                                        <div class="swiper-button-prev swiper-button-black"></div>
+                                </div>
+                                <div class="location">
+                                    <img src="{% static "image/pre16.webp"%}" alt="4" >
+                                </div>
+                                <div class="message">
+                                        <p style="font-size:25px;font-weight: 400;">
+                                                设计特点：
+                                    </p>
+                                    <p >
+                                            中国中部省份拥有多元化的设计美学，湖南省长沙是最
+                                            独特的。虽然所有其他的影子木偶传统使用直的90度
+                                            轮廓（一些¾转向专业角色的面孔），长沙的木偶传统的
+                                            整体是¾转脸（两只眼睛都可见）。长沙传统还使用纸张，
+                                            彩色半透明蜡纸和彩色塑料的混合物来制作他们的影子木偶。
+                                            虽然有些地区使用纸而不是皮革作为宗教信仰，但长沙当地人
+                                            解释说，为什么他们选择更便宜的材料是经济上的原因。
+                                            湖南影戏又称“影子戏”，“灯影戏”，“纸影戏”；此外，在民间还有一些
+                                            地域性的名称，仍保留有宋代影戏的古老形态，与我国其它区域的影戏
+                                            相比，湖南民间影戏最突出的特点是影偶采用多层土纸裱糊成硬纸壳，
+                                            然后刻镂，着色，涂蜡而成。
+                                    </p>
+                                </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var nav1=document.getElementById("nav1");
+        function show(){
+            if(nav1.style.display==="none")
+            nav1.style.display="block";
+            for(var k = 1; k < nav.length; k++) {
+                        nav[k].style.display = "none";
+                }
+        }
+        var tabs=document.getElementById("con1")
+        var lis=tabs.getElementsByTagName("a");
+        var nav=document.getElementsByClassName("nav2");
+        var imgs=document.getElementsByClassName("img-border");
+        var con2=document.getElementById("con2");
+            for(var i = 0; i < lis.length; i++) {
+                lis[i].index = i;
+                lis[i].onmouseover=function(){
+                    for(var y=0;y<imgs.length;y++){
+                        imgs[y].style.display="none";
+                    }
+                    imgs[this.index+1].style.display="block";
+                }
+                lis[i].onmouseout=function(){
+                    imgs[0].style.display="block";
+                    for(var y=1;y<imgs.length;y++){
+                        imgs[y].style.display="none";
+                    }
+                }
+                lis[i].onclick = function() {
+                    imgs[this.index+1].style.display="block";
+                    for(var k = 0; k < nav.length; k++) {
+                        nav[k].style.display = "none";
+                    }
+                    nav[this.index+1].style.display = "block";
+                    // for(var j = 0; j < imgs.length; j++) {
+                    //     imgs[j].style.display = "none";
+                    // }
+                    // imgs[this.index].style.display="block";
+                }
+            }
+
+            var appendNumber = 10;
+            var prependNumber = 1;
+            var swiper = new Swiper('#swiper1', {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
+            virtual: {
+                slides: (function () {
+                  var slides = [];
+                  for (var i = 0; i < 4; i += 1) {
+                    slides.push('<a href=""><img src=/static/image/zb'+(i+1)+'.webp class="img2"></a>')
+                  }
+                  return slides;
+                }()),
+              },
+            autoplay: {
+                delay: 1000,
+            },
+            autoResize: false,
+
+            });
+            var swiper = new Swiper('#swiper2', {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
+            virtual: {
+                slides: (function () {
+                  var slides = [];
+                  for (var i = 0; i < 4; i += 1) {
+                    slides.push('<a href=""><img src=/static/image/db'+(i+1)+'.webp class="img2"></a>')
+                  }
+                  return slides;
+                }()),
+              },
+            autoplay: {
+                delay: 1000,
+            },
+            autoResize: false,
+
+            });
+            var swiper = new Swiper('#swiper3', {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
+            virtual: {
+                slides: (function () {
+                  var slides = [];
+                  for (var i = 0; i < 4; i += 1) {
+                    slides.push('<a href=""><img src=/static/image/xb'+(i+1)+'.webp class="img2"></a>')
+                  }
+                  return slides;
+                }()),
+              },
+            autoplay: {
+                delay: 1000,
+            },
+            autoResize: false,
+
+            });
+            var swiper = new Swiper('#swiper4', {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
+            virtual: {
+                slides: (function () {
+                  var slides = [];
+                  for (var i = 0; i < 4; i += 1) {
+                    slides.push('<a href=""><img src=/static/image/xl'+(i+1)+'.webp class="img2"></a>')
+                  }
+                  return slides;
+                }()),
+              },
+            autoplay: {
+                delay: 1000,
+            },
+            autoResize: false,
+
+            });
+            var swiper = new Swiper('#swiper5', {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                hideOnClick: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+              },
+            virtual: {
+                slides: (function () {
+                  var slides = [];
+                  for (var i = 0; i < 4; i += 1) {
+                    slides.push('<a href=""><img src=/static/image/c'+(i+1)+'.webp class="img2"></a>')
+                  }
+                  return slides;
+                }()),
+              },
+            autoplay: {
+                delay: 1000,
+            },
+            autoResize: false,
+
+            });
+    </script>
+</body>
+</html>

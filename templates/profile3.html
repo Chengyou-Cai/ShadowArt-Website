@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国皮影戏--王燕</title>
+    <link rel="stylesheet" href="{% static "css/profiles1.css" %}">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css" %}">
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <!-- boorstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<!-- themify-icon.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/themify-icons.css" %}">
+	<!-- owl-carousel -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}">
+	<!-- light-box -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/lightbox.css" %}">
+	<!-- menu.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/menu.css" %}">
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<!-- responsive.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/responsive.css" %}">
+</head>
+<body>
+    <!-- 导航栏 -->
+<div class="head" style="z-index:1; color: #777;">
+      <div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+      <div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+          <ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+			  {% if user.is_authenticated %}
+			  <li style="margin: 0 15px;">
+				<a href="{% url 'logout' %}">登出</a>
+			</li>
+			   {% else %}
+					 <li style="margin: 0 15px;">
+				<a href="{% url 'login' %}">登陆</a>
+			</li>
+			  {% endif %}
+          </ul>
+      </div>
+      <div class="link" style="padding: 0px">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+  </div>
+   <!-- Start of blog sinlge content
+		============================================= -->
+		<section id="blog-single" class="blog-single-content pt90" style="background-color:#f4f4f4;">
+			<div class="container">
+				<div class="row">
+					<div class="blog-single-content">
+						<div class="row">
+							<div class="col-sm-9">
+
+								<div class="blog-single-right-side">
+
+									<div class="blog-main-link deep-black mt20">
+										<h2><a href="#">王燕不仅是最年轻的大师之一，也是业内少数女性之一。</a></h2>
+									</div>
+									<!-- //.blog-main-link -->
+
+
+									<div class="blog-meta mt10  ul-li">
+										<ul class="meta-list">
+											<li><a href="#">2019/8/26 </a></li>
+											<li><a href="#">  王燕 /  </a></li>
+											<li><a href="#">陕西省</a></li>
+										</ul>
+									</div>
+                                    <!-- //.blog-meta -->
+
+                                    <div class="blog-single-main-img">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper"></div>
+                                            <!-- Add Pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            <!-- Add Arrows -->
+                                            <div class="swiper-button-next swiper-button-black"></div>
+                                            <div class="swiper-button-prev swiper-button-black"></div>
+                                        </div>
+									</div>
+
+									<div class="blog-single-text mt30">
+										<span>上周，在西安的一家剪纸工作室里，一位参观者走过，随口问了问工作室里的成员是否在大学里学过剪纸。我的朋友王燕笑着说:不，我们是农民。这个问题也让我笑了一下，
+                                                然后我才想起这个木偶裁剪师的故事并不出名。我很想和大家分享王燕的故事，不仅因为她是我
+                                                的好朋友，而是因为我相信了解艺术背后的人会让它更美丽。</span>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-text mt20">
+										<span>我认识王燕四年了。我第一次见到她是在她陕西华县郊外当学徒的时候。她很不辛被任命为我的老师，在接下来的一个半月里，我们磕磕绊绊地进行着每一次交流。在那个学徒期结束时，我还不太了解皮影的技术，但我已经看得够多了，知道王燕是陕西最好的刀具师傅之一。</span>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-text mt30 row">
+										<div class="col-sm-5">
+											<img src="{% static "image/pro3.1.webp"%}" alt="image" style="width:400px;height:300px;">
+										</div>
+										<div class="col-sm-7">
+											<span class="pt50 table-display">现在，经过6个多月的中国巡演，看到了最好的新老皮影戏，我很确定她是中国最好的皮影艺术家之一。她才28岁。王燕出生和长大在华县一个小镇附近的农村。华县是西安以东的一个小镇，长期以来一直被誉为中国皮影戏的诞生地。它坐落在北部典型的粘土样土壤上的一个长山脉之下。几代人以来，她的家人一直在这片土地上耕耘，现在依然如此。王燕和哥哥姐姐一起上中学，但是她的家庭负担不起他们上高中的费用。
+                                                    她对自己当农民的未来并不热心，于是她开始接受父母建议的另一种选择——割皮影戏。十年前，华县的农民把木偶从家里切下来卖给当地较大的文化商品公司，这些公司再把木偶卖给公众，这是很赚钱的。</span>
+										</div>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-quate mt60">
+										<blockquote>
+											她从17岁开始，没有受过任何艺术训练。在王天文师傅的弟弟的教导下，她每天学习10个小时，三个月后，她就可以开始切基本的木偶了。几年后，她离开了家乡，加入了华县裕田公司，是一家今年4月刚到西安新成立的分公司。
+										</blockquote>
+									</div>
+									<!-- // .blog-single-quate -->
+									<!-- // .blog-single-text -->
+                                    <div class="blog-single-text mt20">
+										<span> 在过去十年左右的时间里，中国有超过3亿人离开农村，到城市里从事更有收入的工作，搬到西安使她成为其中之一;这真的是世界历史上最大的人类迁徙。王燕的工资和西安的生活水平相当，华贤的生活水平也相当不错。她的父母非常自豪。王燕觉得有点复杂。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span>  几个星期前，我有一个机会去拜访她，当时她正在华县度假，所以回家待了几天。她的家美极了。与西安的繁华相比，这真是一个名副其实的天堂。他们那舒适的平房坐落在一座山的脚下，山高得像雾一样。她的祖母、父母、姐姐、哥哥、以及他们的孩子和配偶都住在这里，充满着温暖和笑容。王燕的男朋友在采石场工作，从她家出发沿着山路走几分钟就能到采石场了。显而易见，她的生活就在这里。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span>在西安，她与玉田的另一名员工合租了一套单间公寓。共用的浴室和水槽在走廊的尽头。他们的房租只占月工资的一小部分。她可以住得起高档的高层建筑，但她没有。像许多其他来自农村的工人一样，他们的家仍然在农村，而不是城市。她一有机会就乘公共汽车回家。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span>我经常有问她关于工作的事。她通常的回答是耸耸肩，然后说:没事。起初，这让我很沮丧;就像听贝多芬说，钢琴没问题。你怎么能对你做得这么好的事情如此漠不关心呢?她真的做得很好。从远处看，她和其他专业人士剪得一样。但近距离来看，她的切割精度与精致的设计平衡绝对是惊人的和无与伦比的。她的切割是如此完美，看起来像有机的，就像命中注定的那样。</span>
+									</div>
+                                    <div class="blog-single-text mt20">
+										<span> 我不认为她会在远离家乡的情况下进行比赛。但是，当然，她会在时机成熟时做她必须做的事情。就目前而言，她和我都很高兴能够一起度过夏天并重新回到一起，将我们的白天时间合理分配，听音乐和辩论午餐或者晚餐吃什么。她是我在离开西安后最想念的人之一。</span>
+									</div>
+
+                                    <div class="blog-share ul-li mt60" style="margin-top:20px;">
+										<a href="{% url "profiles" %}" class="a1" style="font-size: 18px;"> <img src="{% static "image/返回.png"%}" style="width:20px;height:20px;">返回</a>
+									</div>
+									<!-- //.blog-share -->
+								</div>
+								<!-- //.blog-single-right-side -->
+
+
+								<div class="blog-single-comment pt90">
+
+									<div class="comment-form-list">
+										<div class="comment-form-list-pic-text">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">山顶洞人阿里</span>
+												<span class="author-date">2019-7-15</span>
+												<span class="author-dec">中国皮影艺术，深受国内外热爱民俗文化人士的喜爱。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+										<!-- //.comment-form-list-pic-text -->
+
+										<div class="comment-form-list-pic-text ">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">翠喜儿</span>
+												<span class="author-date">2019年7月20日</span>
+												<span class="author-dec">皮影是我小时候的记忆了，现在住在城市，真的是很难看到了，也只有这些老艺术家一直在坚持，我真的很怀念小时候看皮影的日子。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="comment-form-list-pic-text">
+
+										<!-- //.img -->
+										<div class="author-text">
+											<span class="author-name deep-black">融小信</span>
+											<span class="author-date">2019年8月10日</span>
+											<span class="author-dec">这些皮影人偶着的太精致了，我如果能有一个就好了。</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+										</div>
+									</div>
+									<!-- //.comment-form-list-pic-text -->
+                                               {% for comment in comments %}
+                                            <div class="comment-form-list-pic-text">
+                                            <span class="author-name deep-black">{{ comment.posted_by }}</span>
+											<span class="author-date">{{ comment.create_time }}</span>
+											<span class="author-dec">{{ comment.comment }}</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+                                            </div>
+                                        {% endfor %}
+									<div class="blog-single-comment-head text-capitalize  pt90">
+										<h3 class="title-head deep-black">发表你的想法</h3>
+									</div>
+
+									<div class="comment-form mt50 ">
+										  {% if user.is_authenticated %}
+                          <form method="POST" action="{% url 'comment' num %}">
+                            {% csrf_token %}
+                            <input type="text" name="comment" style="width: 800px; height: 145px;">
+                            <button type="submit" class="popin-btn" style="font-size:20px;">发表</button>
+                          </form>
+                        {% else %}
+                          <p><a href="{% url 'login' %}">登陆后</a> 发表评论</p>
+                        {% endif %}
+									</div>
+								</div>
+								<!-- //.blog-single-comment -->
+
+							</div><!--  /.col-sm-9 -->
+
+
+							<div class="col-sm-3">
+								<div class="blog-single-right-side-bar">
+
+									<!-- /.blog-search  -->
+
+
+
+									<!-- //.blog-single-right-side-content -->
+
+
+
+									<div class="blog-single-right-side-content mt50">
+										<div class="blog-single-side-title text-capitalize">
+											<h2 class="widgettitle deep-black">推荐阅读</h2>
+										</div>
+										<!-- //.widgettitle -->
+
+										<div class="recent-post-list mt30">
+											<div class="recent-blog-item">
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t3.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 2 %}">中国皮影戏——鲁家</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/23</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t4.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 3 %}">中国皮影戏——王燕</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/20</a> </li>
+														</ul>
+													</div>
+												</div>
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t5.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 4 %}">中国皮影戏——腾冲皮影剧团</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/15</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t6.png"%}"  alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 4 %}">中国皮影戏——范师傅</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i>2019/7/3</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+											</div>
+										</div>
+
+									</div>
+									<!-- //.blog-single-right-side-content -->
+									<!-- //.blog-single-right-side-content -->
+
+								</div>
+								<!-- //.blog-single-right-side-bar -->
+							</div>
+							<!--  /.col-sm-3 -->
+
+
+						</div><!--  /.row -->
+					</div><!-- //.blog-single-content -->
+				</div><!--  /.row -->
+			</div><!--  /.container -->
+		</section>
+	<!-- End of blog single content
+		============================================= -->
+        <script>
+                var appendNumber = 10;
+                var prependNumber = 1;
+                var swiper = new Swiper('.swiper-container', {
+                  slidesPerView: 3,
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                  },
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    hideOnClick: true,
+                  },
+                  virtual: {
+                    slides: (function () {
+                      var slides = [];
+                      for (var i = 2; i < 6; i += 1) {
+                        slides.push('<a href=""><img src=/static/image/pro3.'+i+'.webp></a>')
+                      }
+                      return slides;
+                    }()),
+                  },
+                  autoplay: {
+                      delay: 1000,
+                   },
+                   autoResize: false,
+
+                });
+
+
+        </script>
+</body>
+
+</html>

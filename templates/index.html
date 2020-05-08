@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>首页/历史</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+
+
+    <meta name="msvalidate.01" content="C13DD3387277B0F3CE990F81CFBC14DE" />
+    <meta name="google-site-verification" content="ybLahfG-T6bkau-WF2COvENYMMkrXjFJuiIewrYoxAU" />
+
+    <link href="https://fonts.googleapis.com/css?family=Martel:300|Montserrat:300" rel="stylesheet">
+
+
+        <!-- 图标 -->
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css" %}">
+
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/swiper.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/merged.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/cart.min.css" %}">
+    <script src="{%  static "js/typed.min.js" %}"></script>
+
+<link rel="stylesheet" href="{% static "css/template.css" %}">
+<meta name="referrer" content="always"/>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+
+
+</head>
+ <body id="emersion" class="home page-template page-template-template-emersion page-template-template-emersion-php page page-id-39 woocommerce-no-js" style="background-color:#f4f4f4;">
+    <!-- 导航栏 -->
+    <div class="head" style="z-index:1; color: #777;">
+      <div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+      <div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+          <ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+             <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li style="margin: 0 15px;">
+                <a href="{% url 'logout' %}">登出</a>
+            </li>
+               {% else %}
+                     <li style="margin: 0 15px;">
+                <a href="{% url 'login' %}">登陆</a>
+            </li>
+              {% endif %}
+          </ul>
+      </div>
+      <div class="link" style="padding: 30px 0 15px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+  </div>
+  <!-- 导航栏 -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106584914-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+    <div id="slider-home">
+
+      <div class="slider-wrapper">
+
+        <div id="slider-content-home" class="slider-content">
+                      <div class="nav-title-ref">溯源</div>
+
+          <div id="slider-intro-book">
+        			<ul id="book-parallax" class="scene-parallax"
+                data-friction-x="0.05"
+          			data-friction-y="0.05"
+          			data-scalar-x="15"
+          			data-scalar-y="25">
+          			<li class="layer" data-depth="0.10">
+                  <img src="https://michael-petrov.com/assets/images/book_cover_shadow.png" alt="" class="intro-book-shadow" data-depth="0.10" />
+          			</li>
+          			<li class="layer" data-depth="0.15">
+                  <img src="{% static 'image/suyuan1.jpg' %}" alt="&Eacute;mersion par Michael Petrov" class="intro-book-img" data-depth="0.20" />
+          			</li>
+        			</ul>
+          </div>
+
+          <div class="slider-text slider-text-left center-vertical scroll-anim">
+                          <h2 class="slider-text-title">皮影戏溯源</h2>
+                                      <div class="slider-text-paragraph">
+                <p>据记载，大约两千多年前，汉武帝有一个非常宠爱的妃子李夫人，因为患病不幸去世。汉武帝非常思念她，甚至有些精神恍惚，没有心情打理朝政。</p><p>大臣李少翁有一次出门，看到路边的孩子拿着布娃娃在玩耍，倒影出来的影子也是栩栩如生。于是这位李大人有了奇思妙想，回家后用棉布剪成了李夫人的影像，并涂上了颜色，在手脚装上了木杆。夜晚来临时，点上了蜡烛，皇帝端坐在帷帐中间。汉武帝看到这种情形之后龙颜大悦，并对它爱不释手。</p><p>后来，人们将汉武帝的痴心写入了《汉书》，作为一段很凄美的爱情故事，而这些被认为是皮影戏最早的起源。</p>
+              </div>
+
+          </div><!--END <div class="slider-text-->
+
+        </div><!--END <div id="slider-content-home" class="slider-content">-->
+
+
+
+        <div id="slider-content-chapter-1" class="slider-content">
+                      <div class="nav-title-ref">诞生</div>
+
+          <div class="slider-text slider-text-left center-vertical scroll-anim" style="background-color: #f1ecdcd9;padding-top: 10px;padding-left: 10px;">
+                          <div class="slider-text-paragraph sans-serif style-h5 uppercase">
+                <span class="slider-chapter-info color-grey" style="color:#a00 !important"> <strong>&nbsp;两千年前&nbsp;诞生</strong> </span>
+              </div>
+                                      <div class="style-h3 slider-text-title">皮影戏最早诞生在两千年前的西汉,又称羊皮戏,俗称人头戏,影子戏,驴皮影。发源于中国陕西,极盛于清代的河北。上色时主要使用红、黄、青、绿、黑等五种纯色。</div>
+                      </div>
+
+
+          <div class="slider-video slider-video-right scroll-anim-fast">
+            <ul id="video-parallax-1" class="scene-parallax video-parallax"
+              data-friction-x="0.05"
+        			data-friction-y="0.05"
+        			data-scalar-x="30"
+        			data-scalar-y="30">
+              <li class="layer" data-depth="0.10">
+                <img src="{% static 'image/dansheng1.png' %}" alt="">
+                <!-- <video loop muted playsinline poster="../image/dansheng1.png" id="video-1" class="center-horizontal center-vertical">
+                </video> -->
+              </li>
+            </ul>
+          </div>
+
+        </div><!--END <div id="slider-content-chapter-1" class="slider-content">-->
+
+
+
+        <div id="slider-content-chapter-2" class="slider-content">
+                      <div class="nav-title-ref">传播</div>
+
+          <div class="slider-text slider-text-right center-vertical scroll-anim"style="background-color: #f1ecdcd9;padding-top: 10px;padding-left: 10px;">
+                          <div class="slider-text-paragraph sans-serif style-h5 uppercase">
+                <span class="slider-chapter-info color-grey"><strong>&nbsp;元代&nbsp;传播</strong></span>
+              </div>
+                                      <div class="style-h3 slider-text-title">到了元代时期，皮影戏被传入到了阿拉伯、缅甸以及欧洲等地。明武宗时期，曾经在北京举办了百戏大会，其中就有皮影戏。</div>
+                                      <div class="style-h3 slider-text-title">左边的《傀儡婴戏图》中，便绘画有四个小孩在庭院中表演影戏的场面。其中一个坐在幕窗后面耍弄影人；一个坐在幕窗前击鼓伴奏；剩下两个从旁观看。</div>
+                      </div>
+
+          <div class="slider-video slider-video-left scroll-anim-fast">
+            <ul id="video-parallax-2" class="scene-parallax video-parallax"
+              data-friction-x="0.05"
+        			data-friction-y="0.05"
+        			data-scalar-x="30"
+        			data-scalar-y="30">
+              <li class="layer" data-depth="0.10">
+                <img src="{% static "image/chuanbo.jpg" %}" alt="">
+                <!-- <video loop muted playsinline poster="../image/chuanbo2.jpg">
+
+                </video> -->
+              </li>
+            </ul>
+          </div>
+
+        </div><!--END <div id="slider-content-chapter-2" class="slider-content">-->
+
+
+
+        <div id="slider-content-chapter-3" class="slider-content">
+                      <div class="nav-title-ref">鼎盛</div>
+
+          <div class="slider-text slider-text-left center-vertical scroll-anim"style="background-color: #f1ecdcd9;padding-top: 10px;padding-left: 10px;">
+                          <div class="slider-text-paragraph sans-serif style-h5 uppercase">
+                <span class="slider-chapter-info color-grey"><strong>&nbsp;清军入关&nbsp;鼎盛</strong></span>
+              </div>
+                                      <div class="style-h4 slider-text-title"><p>从清军入关之后，皮影戏达到了鼎盛的发展时期。很多皮影艺人子承父业,数代相传。无论是从影人造型制作、影戏演技唱腔和流行地域上讲，都达到了历史的巅峰。当时很多官第王府豪门旺族乡绅大户，都以请名师刻制影人、蓄置精工影箱、私养影班为荣。在民间乡村城镇，大大小小皮影戏班比比皆是，一乡一市有二三十个影班也不足为奇。无论逢年过节、喜庆丰收、祈福拜神、嫁娶宴客、添丁祝寿，都少不了搭台唱影。连本戏(连续剧)要通宵达旦或连演十天半月不止，一个庙会可出现几个影班搭台对擂唱影，热闹非凡，其盛状可想老腔皮影而知。</p></div>
+                      </div>
+          <div class="slider-video slider-video-right scroll-anim-fast">
+            <ul id="video-parallax-3" class="scene-parallax video-parallax"
+              data-friction-x="0.05"
+        			data-friction-y="0.05"
+        			data-scalar-x="30"
+        			data-scalar-y="30">
+              <li class="layer" data-depth="0.10">
+                <video loop muted playsinline poster="{% static "image/dingsheng.jpg" %}" id="video-3" class="center-horizontal center-vertical">
+
+                </video>
+              </li>
+            </ul>
+          </div>
+
+        </div><!--END <div id="slider-content-chapter-3" class="slider-content">-->
+
+
+
+        <div id="slider-content-chapter-4" class="slider-content">
+                      <div class="nav-title-ref">衰弱凋零</div>
+
+          <div class="slider-text slider-text-right center-vertical scroll-anim"style="background-color: #f1ecdcd9;padding-top: 10px;padding-left: 10px;">
+                          <div class="slider-text-paragraph sans-serif style-h5 uppercase">
+                <span class="slider-chapter-info color-grey"><strong>&nbsp;清代后期&nbsp;衰弱凋零</strong></span>
+              </div>
+                                      <div class="style-h4 slider-text-title"><p>皮影艺术的发展也并非那么一帆风顺，它也经历过风雨劫难、起落兴衰。到了清代后期，曾有些地方官府害怕皮影戏的黑夜场所聚众起事，便禁演影戏，甚至捕办皮影艺人。皮影艺人还曾受清末白莲教起义的牵连，被以“玄灯匪”的罪名遭到查抄。<br>日军入侵前后,又因社会动荡和连年战乱,民不聊生,致使盛极一时的皮影行业万户凋零,一蹶不振。</p></div>
+                      </div>
+          <div class="slider-video slider-video-left scroll-anim-fast">
+            <ul id="video-parallax-4" class="scene-parallax video-parallax"
+              data-friction-x="0.05"
+        			data-friction-y="0.05"
+        			data-scalar-x="30"
+        			data-scalar-y="30">
+              <li class="layer" data-depth="0.10">
+                <video loop muted playsinline poster="{% static "image/shuairuo.jpg" %}" id="video-4" class="center-horizontal center-vertical">
+                </video>
+              </li>
+            </ul>
+          </div>
+
+        </div><!--END <div id="slider-content-chapter-4" class="slider-content">-->
+
+
+
+        <div id="slider-content-chapter-5" class="slider-content">
+                      <div class="nav-title-ref">新中国成立</div>
+
+          <div class="slider-text slider-text-left center-vertical scroll-anim"style="background-color: #f1ecdcd9;padding-top: 10px;padding-left: 10px;">
+                          <div class="slider-text-paragraph sans-serif style-h5 uppercase">
+                <span class="slider-chapter-info color-grey"><strong>&nbsp;新中国成立&nbsp;复苏</strong></span>
+              </div>
+                                      <div class="style-h4 slider-text-title"><p>1949年后，全国各地残存的皮影戏班、艺人又开始重新活跃。50年代，各省文化部门开始寻找调查皮影艺人组建剧团。经调查虽尚存技艺精湛的皮影老艺人。但时至今日，仅存的几位老艺人年岁均逾七旬，后继乏人，已属重点抢救的传统民间艺术项目之一。如今保护民间文化的口号已经打响，皮影艺术受到多方关注，大家力图通过各种途径去保护和传承它。但着实有效的行动还没有，艺人们真正能够得到的实惠并不多。</p></div>
+                      </div>
+          <div class="slider-video slider-video-right scroll-anim-fast">
+            <ul id="video-parallax-5" class="scene-parallax video-parallax"
+              data-friction-x="0.05"
+        			data-friction-y="0.05"
+        			data-scalar-x="30"
+        			data-scalar-y="30">
+              <li class="layer" data-depth="0.10">
+                <video loop muted playsinline poster="{% static 'image/fusu.jpg' %}" id="video-5" class="center-horizontal center-vertical">
+                </video>
+              </li>
+
+            </ul>
+          </div>
+
+        </div><!--END <div id="slider-content-chapter-5" class="slider-content">-->
+                <div id="slider-content-end" class="slider-content">
+                      <div class="nav-title-ref">复兴传承</div>
+
+          <div class="slider-text center-horizontal text-center scroll-anim">
+                          <div class="style-h1 slider-text-title" style="font-family:楷体">复兴传承</div>
+                          <div style="font-size:20px">如果你有好的想法，请<a href="{% url 'contact' %}" style="color:#000">联系我们</a>。</div>
+                          <!-- <div>皮影艺术是世代民间艺人智慧的结晶，是中华民族珍贵的艺术瑰宝，但随着社会的发展，传统的影戏生存环境受到破坏，皮影传承岌岌可危，非常需要大家的关注与支持！ <br>如果你有好的想法，请联系我们。</div>
+             -->
+            <!-- <div class="padding-m"></div>
+
+            <ul class="slider-text-btn ul-inline">
+              <li>
+                <a href="mailto:info@michael-petrov.com" class="btn-corpo btn-corpo-big">
+                  <span>
+                    <span>Contactez-moi</span>
+                    <div class="btn-text-hover">Contactez-moi</div>
+                  </span>
+                  <div class="btn-border btn-border-1"></div>
+                  <div class="btn-border btn-border-2"></div>
+                  <div class="btn-border btn-border-3"></div>
+                  <div class="btn-border btn-border-4"></div>
+                  <div class="btn-hover btn-hover-1"></div>
+                  <div class="btn-hover btn-hover-2"></div>
+                  <div class="btn-hover btn-hover-3"></div>
+                  <div class="btn-hover btn-hover-4"></div>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://michael-petrov.com/?page_id=206&add-to-cart=210" class="btn-corpo btn-corpo-big change-page buy-woocommerce">
+                  <span>
+                    <span>Imprim&eacute;</span>
+                    <div class="btn-text-hover">Imprim&eacute;</div>
+                  </span>
+                  <div class="btn-border btn-border-1"></div>
+                  <div class="btn-border btn-border-2"></div>
+                  <div class="btn-border btn-border-3"></div>
+                  <div class="btn-border btn-border-4"></div>
+                  <div class="btn-hover btn-hover-1"></div>
+                  <div class="btn-hover btn-hover-2"></div>
+                  <div class="btn-hover btn-hover-3"></div>
+                  <div class="btn-hover btn-hover-4"></div>
+                </a>
+              </li><li>
+                <a href="https://michael-petrov.com/?page_id=8&edd_action=add_to_cart&download_id=17" class="btn-corpo btn-corpo-big change-page">
+                  <span>
+                    <span>Digital</span>
+                    <div class="btn-text-hover">Digital</div>
+                  </span>
+                  <div class="btn-border btn-border-1"></div>
+                  <div class="btn-border btn-border-2"></div>
+                  <div class="btn-border btn-border-3"></div>
+                  <div class="btn-border btn-border-4"></div>
+                  <div class="btn-hover btn-hover-1"></div>
+                  <div class="btn-hover btn-hover-2"></div>
+                  <div class="btn-hover btn-hover-3"></div>
+                  <div class="btn-hover btn-hover-4"></div>
+                </a>
+              </li>
+
+            </ul> -->
+
+            <div class="padding-m"></div>
+
+            <div id="download-book-wrapper">
+        			<ul id="download-book" class="scene-parallax"
+                data-friction-x="0.05"
+          			data-friction-y="0.01"
+          			data-scalar-x="65"
+          			data-scalar-y="1">
+          			<li class="layer" data-depth="0.10">
+                  <img src="{% static 'image/印章.png' %}" alt="&Eacute;mersion" class="download-book-2d" data-depth="0.10" />
+          			</li>
+        			</ul>
+
+            </div><!--END <div id="download-book-wrapper">-->
+          </div><!--END <div class="slider-text-->
+
+        </div><!--END <div id="slider-content-end" class="slider-content">-->
+
+
+
+
+      </div><!--END <div id="slider-wrapper">-->
+
+    </div><!--END <div id="slider-home">-->
+
+
+
+    <div id="slider-home-nav">
+      <div class="slider-home-nav-wrapper">
+        <div class="slide-nav-item"></div><div class="slide-nav-item"></div><div class="slide-nav-item"></div><div class="slide-nav-item"></div><div class="slide-nav-item"></div><div class="slide-nav-item"></div><div class="slide-nav-item"></div>
+      </div>
+    </div>
+    <ul id="nav" class="nav color-grey-light style-h5 center-vertical"></ul>
+    <!--END <div id="nav-indication">-->
+
+
+
+    <div id="indice-scroll" class="slide-to-2">
+      <div class="indice-arrow border-grey"></div>
+    </div>
+
+
+
+          <div id="author-wrapper" class="bg-light"></div>
+
+
+
+
+
+
+
+
+    <div id="page-loading" class="bg-light center-horizontal center-vertical">
+              <div id="loading-text-container" class="center-vertical text-center style-h1 color-grey">
+          <div id="loading-text-strings">
+            <span>中国皮影戏</span>
+          </div>
+          <div id="loading-text"></div>
+        </div>
+          </div>
+
+
+    <!-- <script type="text/javascript" src="https://michael-petrov.com/assets/js/jquery-1.11.2.min.js"></script>
+
+    <script type="text/javascript" src="https://michael-petrov.com/assets/js/modernizr-2.8.3.min.js"></script>
+
+          <script type="text/javascript" src="https://michael-petrov.com/assets/lib/swiper/swiper.min.js"></script>
+
+    <script type="text/javascript" src="https://michael-petrov.com/assets/lib/parallax/parallax.js"></script>
+
+    <script type="text/javascript" src="https://michael-petrov.com/assets/js/effect.min.js"></script> -->
+    <script type="text/javascript" src="{% static "js/jquery-1.11.2.min.js" %}"></script>
+
+    <script type="text/javascript" src="{% static "js/modernizr-2.8.3.min.js" %}"></script>
+
+          <script type="text/javascript" src="{% static "js/swiper.min.js" %}"></script>
+
+    <script type="text/javascript" src="{%static "js/parallax.js" %}"></script>
+
+    <script type="text/javascript" src="{% static "js/effect.min.js" %}"></script>
+
+
+          <script type="text/javascript">
+        function navTitle(){
+        /*--------------------------------------------------------- SLIDER NAV TITLE ---------------------------------------------------------*/
+          var navtitleref1 = $('.slider-content:nth-child(1) .nav-title-ref').text();
+          var navtitleref2 = $('.slider-content:nth-child(2) .nav-title-ref').text();
+          var navtitleref3 = $('.slider-content:nth-child(3) .nav-title-ref').text();
+          var navtitleref4 = $('.slider-content:nth-child(4) .nav-title-ref').text();
+          var navtitleref5 = $('.slider-content:nth-child(5) .nav-title-ref').text();
+          var navtitleref6 = $('.slider-content:nth-child(6) .nav-title-ref').text();
+          var navtitleref7 = $('.slider-content:nth-child(7) .nav-title-ref').text();
+
+          $('.nav-item:nth-child(1) .nav-title').html(navtitleref1);
+          $('.nav-item:nth-child(2) .nav-title').html(navtitleref2);
+          $('.nav-item:nth-child(3) .nav-title').html(navtitleref3);
+          $('.nav-item:nth-child(4) .nav-title').html(navtitleref4);
+          $('.nav-item:nth-child(5) .nav-title').html(navtitleref5);
+          $('.nav-item:nth-child(6) .nav-title').html(navtitleref6);
+          $('.nav-item:nth-child(7) .nav-title').html(navtitleref7);
+        }
+        $(document).ready(function(){
+          setTimeout(function () {
+            navTitle();
+          }, 800 );
+          $(window).on( 'resize', function(){
+            setTimeout(function () {
+              navTitle();
+            }, 800 );
+          });
+        });
+      </script>
+
+    	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"https:\/\/michael-petrov.com","ajax_url":"https:\/\/michael-petrov.com\/wp-admin\/admin-ajax.php","queue_url":"https:\/\/michael-petrov.com\/index.php?rest_route=\/mailchimp-for-woocommerce\/v1\/queue\/work","queue_should_fire":""};
+/* ]]> */
+</script>
+{#<script type='text/javascript' src='https://michael-petrov.com/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min.js?ver=2.1.16'></script>#}
+ <script src="{% static "/js/michael.js" %}"></script>
+  </body>
+
+</html>

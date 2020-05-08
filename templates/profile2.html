@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国皮影戏--鲁家</title>
+    <link rel="stylesheet" href="{% static "css/profiles1.css" %}">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css" %}">
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <!-- boorstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<!-- themify-icon.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/themify-icons.css" %}">
+	<!-- owl-carousel -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}">
+	<!-- light-box -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/lightbox.css" %}">
+	<!-- menu.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/menu.css" %}">
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<!-- responsive.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/responsive.css" %}">
+</head>
+
+
+<body>
+    <!-- 导航栏 -->
+  <div class="head" style="z-index:1; color: #777;">
+      <div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+      <div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+          <ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li style="margin: 0 15px;">
+                <a href="{% url 'logout' %}">登出</a>
+            </li>
+               {% else %}
+                     <li style="margin: 0 15px;">
+                <a href="{% url 'login' %}">登陆</a>
+            </li>
+              {% endif %}
+          </ul>
+      </div>
+      <div class="link" style="padding: 0px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+  </div>
+   <!-- Start of blog sinlge content
+		============================================= -->
+		<section id="blog-single" class="blog-single-content pt90" style="background-color:#f4f4f4;">
+			<div class="container">
+				<div class="row">
+					<div class="blog-single-content">
+						<div class="row">
+							<div class="col-sm-9">
+
+								<div class="blog-single-right-side">
+
+                                    <div class="blog-main-link deep-black mt20">
+										<h2><a href="#">作为最后一个真正的家庭经营，这个多代家庭仍在制作精湛的传统木偶。</a></h2>
+									</div>
+									<!-- //.blog-main-link -->
+
+
+									<div class="blog-meta mt10  ul-li">
+										<ul class="meta-list">
+											<li><a href="#">2019/8/26 </a></li>
+											<li><a href="#">  鲁家 /  </a></li>
+											<li><a href="#">河北省</a></li>
+										</ul>
+									</div>
+                                    <!-- //.blog-meta -->
+
+                                    <div class="blog-single-main-img">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper"></div>
+                                            <!-- Add Pagination -->
+                                            <div class="swiper-pagination"></div>
+                                            <!-- Add Arrows -->
+                                            <div class="swiper-button-next swiper-button-black"></div>
+                                            <div class="swiper-button-prev swiper-button-black"></div>
+                                        </div>
+									</div>
+
+									<div class="blog-single-text mt30">
+										<span>我对唐山之行之前有很多期待。我曾经通过西蒙在香港与一位河北省切割大师的儿子天翔相识。我在大陆的前几周给他发了一封电子邮件，从那以后我们一直有通过电话，电子邮件，甚至亲自谈论旅行计划。天翔的热情既令人鼓舞又令人放松。这次旅行可能会非常顺利，也有可能出错。
+
+                                                之前去唐山的巴士之旅就够冒险的了;在北京火车站附近的一条小巷里，有一个公交车站，实际上只有两名男子撑着雨伞站在那里。如果我没有在中国旅行过一段时间的话，我会把这当作一个坏兆头。相反，我把它当作一个提醒。</span>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-text mt20">
+										<span>短短几天时间，我就学会
+                                                了东北传统木偶制作过程中的每一步:牛皮准备、牛皮刮、蜡切板制
+                                                作、手刀制作、唐山剪纸技法、绘画、喷漆、框架技法。令人难以置
+                                                信的是，除了养牛这家人在他们的小房子里什么都自己做。</span>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-text mt30 row">
+										<div class="col-sm-5">
+											<img src="{% static "image/pro2.1.webp"%}" alt="image" style="width:400px;height:300px;">
+										</div>
+										<div class="col-sm-7">
+											<span class="pt50 table-display">当我到达唐山时，天翔正在等我。不到一个小时，我们就
+                                                    搭上了城里的公共汽车，在城里的一个寄宿处办理了登车手续，然后
+                                                    坐了很长时间的公共汽车，从城里回到他家。我们像以前一样聊天，
+                                                    用蹩脚的中文和英文，像老朋友一样轻松自在。</span>
+										</div>
+									</div>
+									<!-- // .blog-single-text -->
+
+									<div class="blog-single-quate mt60">
+										<blockquote>
+                                            公共汽车把我们扔到了一个荒无人烟的地方。我们站在约1.6公里
+                                            长的小型商店中间，这些商店里的商品种类繁多，足
+                                                以满足一个小镇的需求。当他带我去他家的时候，商店里的人已经变得变得零零散
+                                                散，街上也明显安静了下来。左转上了一条土路，喧闹声完全消
+                                                失了。几分钟后我们就走出了土路，看到的只有田野和人。一层砖房，
+                                                每个房子都有的小厨房花园，自制的垃圾堆，脏兮兮的狗，
+                                                路旁蹲着休息的一群朋友。
+										</blockquote>
+									</div>
+									<!-- // .blog-single-quate -->
+
+									<!-- // .blog-single-text -->
+                                    <div class="blog-single-text mt20">
+										<span>                    当我走进他们院子里简朴的砖墙前门时，我首先受到了他母亲的欢迎，然后又受到了他父亲的欢迎。
+                                            </span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span>  在热烈的握手和尴尬的笑声交换之后，我终于有机会环顾四周。院子里的每
+                                                个角落都摆着各种各样的工具，零碎的材料，水泵，磨刀石
+                                                等等。我猜这将是忙碌的一周。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span> 第一个晚上，我第一次看到唐山了的剪纸风格。“天香”的认真态度，自始至终
+                                                都体现在严谨的教学、缜密的策划和丰富的学习体验中。第二天一早我回到了
+                                                乡下。鲁爸爸已经在忙着用旧木片给我的新蜡板做骨架了。许妈妈正忙
+                                                着在里面画牛皮的碎片。</span>
+                                    </div>
+
+                                    <div class="blog-single-text mt20">
+										<span> 这一天过得缓慢而有目的。我们耐心地工作，然后在酷暑中停下来吃一片西瓜
+                                                ，或者和整天轮番工作的邻居聊天。到了中午，我们已经把蜡板做好
+                                                了，在车架上搭了一块浸过水的牛皮，磨好了刮削工具。饱餐一顿后，我
+                                                们又回到兽皮上。刮，转，湿，再刮，再湿，再刮。我的手在第二次转
+                                                弯时起了水泡。下午6点，我们休息准备晚餐，就是一些简单的蔬菜，</span>
+									</div>
+                                    <div class="blog-single-text mt20">
+										<span>  和一家人坐在一起吃饭真是太好了。环顾四周，看着他们相似的面
+                                                孔，听着他们熟悉的交流方式，我意识到我已经有4个多月没有
+                                                在真正的家庭环境中生活了。我的家人已经回到了明尼苏达州，虽然
+                                                我们通过skype、谷歌语音、明信片和电子邮件保持联系，但完全比不上与家人共进晚餐。</span>
+									</div>
+                                    <div class="blog-single-text mt20">
+										<span>我暗暗松了一口气，又感激地叹了口气。在野外工作的时候，你永远
+                                                不知道你会在哪里结束。你做了准备，做了研究，满怀希望，然后开始工作。有些经历有收获，有些根本没有，然后就有了
+                                                你所学习到的一切。你需要学习一切东西，甚至更多。这一周的情况和第一天大致相同;
+                                                每天12个小时的学习，加上丰盛的饭菜、充足的阳光和一些关于如何杀
+                                                死苍蝇的指导。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span> 他们对皮影戏的参与始于鲁师傅小时候。那时，在乡村的教室里，把皮影
+                                                    戏作为学习工具是很普遍的做法。当他们还是小学生的时候，他们中的许
+                                                    多人就已经学会了从纸上剪下简单的木偶，表演一些流行的戏剧。从那时经历中，鲁
+                                                    师傅被皮影迷住了。随着年龄的增长，他渴望从事这一职业，并开始寻找
+                                                    老师。找到了老师后，年轻时的鲁大师就跟随着王大师学习了很长时间，然后开始
+                                                    了自己的工作。之后，鲁大师又花了好几年的时间才找到一位没有师父的孩子，他愿意
+                                                    把自己的技能告传授另一个他姓的人。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span>  1979年，他和一淑结婚，她也开始和鲁师傅一起做人偶，在鲁师傅剪下木偶后，
+                                                    她开始学习画木偶。自从他们结婚后，两人一直用皮影戏作为农业
+                                                    的补充收入。冬天，当其他农民在加工香料或棉花时，他们俩就会在
+                                                    自己的工作室里给木偶剪彩。皮影戏甚至帮助他们度过了艰难的几年
+                                                    ，但当时鲁师傅正与使他无法上场表演皮影戏的健康问题作斗争。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span> 虽然皮影戏让他们度过了一些艰难的时期，但它也给他们带来了巨大的困
+                                                    难和损失。他们感受到了皮影戏在过去半个世纪以来不稳定的人气和
+                                                    缓慢衰落，即使是现在，他们对自己的未来也很渺茫。随着机器皮
+                                                    影开始涌入市场，手工皮影的市场越来越小。并且随着中国以惊人速度的
+                                                    发展，他们的民间艺术也随之消亡。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span>他们知道皮影戏可能是一个危险的未来，所以他们很重视对两个孩子的教育。
+                                                    当他们的儿子天翔即将高中毕业时，他希望能够继续上大
+                                                    学，但家里没有钱。他的父亲建议他学习割皮影来挣学费，他就这
+                                                    么做了。工作后，不久前遇到了裁员，就离开了公司，准备去上一个3年的计算机技术
+                                                    专业课程。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span>毕业后，他开始在市里的一家小型电脑科技公司工作，直到看到父亲
+                                                    为当地电视台做的关于他工作的采访，他才停止剪木偶。就是在
+                                                    这里，他第一次听到了他父亲的故事。当我问他为什么他的父亲
+                                                    没有告诉他，他说，他的父亲总是回答探索性的问题。没什么好说的。天翔说，可能是因为他们太难沟通了。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span>在看到父亲的采访并充分理解皮影戏对他的家庭意味着什么之后，天翔
+                                                    对皮影戏有了不同的理解。这不仅是他的父母为了赚钱而从事的工作，更
+                                                    是个人梦想和国家身份的体现。他兴致勃勃地从事这项工作;他在城里工
+                                                    作空余时都在切木偶，把宝贵的空闲时间花在让家人活跃在更大的皮影戏
+                                                    社区里。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span> 在最后一天，天翔带着我在唐山市到处寻找和木偶有关的一切。大多数地方已
+                                                    经关闭或搬迁，到了第五个地方时，我们都累了，泄气了。我们同意在回去之前
+                                                    再尝试一个目的地;唐山省立博物馆。当我们到达时，停车场是空的，门
+                                                    口站着一个孤独的警卫。我做了最坏的打算。经过一番交谈，我们发现这
+                                                    幢建筑正在翻新，没有对公众开放。当然，我们可以进去，如果我们认识一个认识博物馆管理人员的人，他可以马上来护送我们进去。我准备放弃，但天翔以他特有的毅力拿起电话打了起来。不到30分钟，我们就被护送进去了。博物馆给我留下了深刻的印象，但更让我印象深刻的是天翔对木偶戏和那些想学习木偶戏的人的热情和精力。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span>  在最后一夜，当我们走到土路边上时，我无数次地感谢他。事实上，我的感激之情难以言表，所以我一直在重复。“如果没有你，天翔，我永远不会找到你的家人，也不会向你们所有人学习”。“你错了”，他说是皮影戏让我们走到了一起。不然你我怎么能在世界的另一端找到彼此呢?我们要感谢皮影戏。</span>
+                                    </div>
+                                    <div class="blog-single-text mt20">
+                                            <span> 当然，他是对的。谢谢你，皮影戏。</span>
+                                    </div>
+
+
+                                    <div class="blog-share ul-li mt60" style="margin-top:20px;">
+										<a href="{% url "profiles" %}" class="a1" style="font-size: 18px;"> <img src="{% static "image/返回.png"%}" style="width:20px;height:20px;">返回</a>
+									</div>
+									<!-- //.blog-share -->
+								</div>
+								<!-- //.blog-single-right-side -->
+
+
+								<div class="blog-single-comment pt90">
+
+									<div class="comment-form-list">
+										<div class="comment-form-list-pic-text">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">山顶洞人阿里</span>
+												<span class="author-date">2019年7月15日</span>
+												<span class="author-dec">中国皮影艺术，深受国内外热爱民俗文化人士的喜爱。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+										<!-- //.comment-form-list-pic-text -->
+
+										<div class="comment-form-list-pic-text ">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">翠喜儿</span>
+												<span class="author-date">2019年7月20日</span>
+												<span class="author-dec">皮影是我小时候的记忆了，现在住在城市，真的是很难看到了，也只有这些老艺术家一直在坚持，我真的很怀念小时候看皮影的日子。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+									</div>
+									<!-- //.comment-form-list -->
+
+
+
+									<div class="comment-form-list-pic-text mt20">
+
+										<!-- //.img -->
+										<div class="author-text">
+											<span class="author-name deep-black">融小信</span>
+											<span class="author-date">2019年8月10日</span>
+											<span class="author-dec">这些皮影人偶着的太精致了，我如果能有一个就好了。</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+										</div>
+									</div>
+									<!-- //.comment-form-list-pic-text -->
+                                           {% for comment in comments %}
+                                            <div class="comment-form-list-pic-text">
+                                            <span class="author-name deep-black">{{ comment.posted_by }}</span>
+											<span class="author-date">{{ comment.create_time }}</span>
+											<span class="author-dec">{{ comment.comment }}</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+                                            </div>
+                                        {% endfor %}
+									<div class="blog-single-comment-head text-capitalize  pt90">
+										<h3 class="title-head deep-black">发表你的想法</h3>
+									</div>
+
+									<div class="comment-form mt50 ">
+{#										<form action="#" class="clearfix">#}
+{#											<div class="input-field-wrapper">#}
+{##}
+{##}
+{#											</div>#}
+{#											<div class="clear-fix my-comment-box">#}
+{#												<label for="textarea1"  style="font-size:18px;">内容</label>#}
+{#												<textarea id="textarea1" name="#" cols="30" rows="10"></textarea>#}
+{#											</div>#}
+{#											<button type="submit" class="popin-btn" style="font-size:20px;">发表</button>#}
+{#										</form>#}
+                                        {% if user.is_authenticated %}
+                              <form method="POST" action="{% url 'comment' num %}">
+                                {% csrf_token %}
+                                <input type="text" name="comment" style="width: 800px; height: 145px;">
+                               <button type="submit" class="popin-btn" style="font-size:20px;">发表</button>
+                              </form>
+                            {% else %}
+                              <p><a href="{% url 'login' %}">登陆后</a> 发表评论</p>
+                            {% endif %}
+									</div>
+								</div>
+								<!-- //.blog-single-comment -->
+
+							</div><!--  /.col-sm-9 -->
+
+
+							<div class="col-sm-3">
+								<div class="blog-single-right-side-bar">
+
+									<!-- /.blog-search  -->
+
+
+
+									<!-- //.blog-single-right-side-content -->
+
+
+
+									<div class="blog-single-right-side-content mt50">
+										<div class="blog-single-side-title text-capitalize">
+											<h2 class="widgettitle deep-black">推荐阅读</h2>
+										</div>
+										<!-- //.widgettitle -->
+
+										<div class="recent-post-list mt30">
+											<div class="recent-blog-item">
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t3.png"%}" alt="image">
+
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 1 %}">中国皮影戏——鲁家</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/23</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t4.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 3 %}">中国皮影戏——王燕</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/20</a> </li>
+														</ul>
+													</div>
+												</div>
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t5.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 4 %}">中国皮影戏——腾冲皮影剧团</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/15</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t6.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="#">中国皮影戏——范师傅</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i>2019/7/3</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+											</div>
+										</div>
+
+									</div>
+									<!-- //.blog-single-right-side-content -->
+									<!-- //.blog-single-right-side-content -->
+
+								</div>
+								<!-- //.blog-single-right-side-bar -->
+							</div>
+							<!--  /.col-sm-3 -->
+
+
+						</div><!--  /.row -->
+					</div><!-- //.blog-single-content -->
+				</div><!--  /.row -->
+			</div><!--  /.container -->
+		</section>
+	<!-- End of blog single content
+		============================================= -->
+        <script>
+                var appendNumber = 10;
+                var prependNumber = 1;
+                var swiper = new Swiper('.swiper-container', {
+                  slidesPerView: 3,
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                  },
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    hideOnClick: true,
+                  },
+                  virtual: {
+                    slides: (function () {
+                      var slides = [];
+                      for (var i = 2; i < 6; i += 1) {
+                        slides.push('<a href=""><img src=/static/image/pro2.'+i+'.webp></a>')
+                      }
+                      return slides;
+                    }()),
+                  },
+                  autoplay: {
+                      delay: 1000,
+                   },
+                   autoResize: false,
+
+                });
+
+
+        </script>
+</body>
+
+</html>

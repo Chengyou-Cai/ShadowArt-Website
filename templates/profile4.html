@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国皮影戏--秦大师</title>
+    <link rel="stylesheet" href="{% static "css/profiles1.css" %}">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css" %}">
+    <link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css" %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+    <!-- boorstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+	<!-- themify-icon.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/themify-icons.css" %}">
+	<!-- owl-carousel -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}">
+	<!-- light-box -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/lightbox.css" %}">
+	<!-- menu.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/menu.css" %}">
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+	<!-- responsive.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "css/responsive.css" %}">
+</head>
+<body>
+    <!-- 导航栏 -->
+   <div class="head" style="z-index:1; color: #777;">
+      <div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+      <div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+          <ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li style="margin: 0 15px;">
+                <a href="{% url 'logout' %}">登出</a>
+            </li>
+               {% else %}
+                     <li style="margin: 0 15px;">
+                <a href="{% url 'login' %}">登陆</a>
+            </li>
+              {% endif %}
+          </ul>
+      </div>
+      <div class="link" style="padding: 0px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+  </div>
+   <!-- Start of blog sinlge content
+		============================================= -->
+        <section id="blog-single" class="blog-single-content pt90" style="background-color:#f4f4f4;">
+			<div class="container">
+				<div class="row">
+					<div class="blog-single-content">
+						<div class="row">
+							<div class="col-sm-9">
+                                <div class="blog-single-right-side">
+								<div class="blog-main-link deep-black mt20">
+                                    <h2><a href="#">在中国的西南端，他们是独一无二的。</a></h2>
+                                </div>
+                                <!-- //.blog-main-link -->
+
+
+                                <div class="blog-meta mt10  ul-li">
+                                    <ul class="meta-list">
+                                        <li><a href="#">2019/8/26 </a></li>
+                                        <li><a href="#">  腾冲影子团 /  </a></li>
+                                        <li><a href="#">云南省</a></li>
+                                    </ul>
+                                </div>
+                                <!-- //.blog-meta -->
+
+                                <div class="blog-single-main-img">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper"></div>
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- Add Arrows -->
+                                        <div class="swiper-button-next swiper-button-black"></div>
+                                        <div class="swiper-button-prev swiper-button-black"></div>
+                                    </div>
+                                </div>
+
+                                <div class="blog-single-text mt30">
+                                    <span>我从云南香格里拉坐了整整两天的车。虽然这里的景色令人叹为观止，八个月来我第一次看到了天空，但几乎没有一段笔直长达400米的路。所有这些都是沿着山路弯道行驶的，而且中国巴士司机都喜欢以无情的速度行驶。即使没有美丽的风景，
+                                            我还是很高兴来到腾冲。腾冲是一个位于云南省西部的城市，几乎与缅甸接壤。你可以从地图上看出它很小;这里没有令人麻木的街道网络和无尽的
+                                            环形道路，只有几条主要的道路可以把你从这一头带到那一头。他们的人口只有50万，按照中国的标准，这相当于一个村庄
+                                            这座城市唯一吸引游客的地方是几个景点和天然的火山温泉。所以，当我发现我住的旅馆就在基蒂角，并且就在
+                                            我要去见的木偶戏演员的生活区旁边时，也就不奇怪了</span>
+                                </div>
+                                <!-- // .blog-single-text -->
+
+                                <div class="blog-single-text mt20">
+                                    <span>我第一次见到这些云南艺术家是在今年九月甘肃环县的皮影戏大会上。在大会开幕前，我参观了皮影戏展览，很兴奋地看到
+                                            云南的皮影戏人偶在展览空间的一个小角落里展出。我以前在一些博物馆见过云南木偶，如果你看过足够多的中国皮影戏，你就知道它们是
+                                            所有风格中最独特的。他们在皮影戏的人偶中很显眼。
+                                            这些设计不一定是最敏捷或最巧妙的，但它们带有某种命令和大胆，似乎它们正在要求你看着它们。我喜欢粗线条和醒目的颜色。</span>
+                                </div>
+                                <!-- // .blog-single-text -->
+
+                                <div class="blog-single-text mt30 row">
+                                    <div class="col-sm-5">
+                                        <img src="{% static "image/pro4.1.webp"%}" alt="image" style="width:400px;height:380px;">
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <span class="pt50 table-display">会议的第一天，我终于见到了云南的刀匠们，他们也是独一无二的。说话温和，认真，有点害羞;这些家伙也站在
+                                                木偶戏的人群中。我喜欢他们，我知道我必须去拜访他们。一到腾冲，我就收到了一大堆计划行程的短信。第二天早上我醒得很早，
+                                                开始我的工作。穿过街道，我绕着这个大型综合体蜿蜒而行，在离表演场地不远的一幢不起眼的公寓楼的二楼，我找到了木偶戏演员的生活区。目前，他们受雇于一家更大的公司，在一家小型文化购物中心里并排开着的着两家设计精美的餐厅里表演夜间节目。这些餐厅作
+                                                为夜间旅游文化体验的场所，为那些前往城市的著名温泉和其他景点的人提供休息。因此云南的皮影表演者们有商业上的支持，也有政府上的支持，生意兴隆。</span>
+                                    </div>
+                                </div>
+                                <!-- // .blog-single-text -->
+
+                                <div class="blog-single-quate mt60">
+                                    <blockquote>
+                                            木偶师们每天都要排练或修理木偶，甚至在日落时分还要处理一些独立的艺术项目。他们在一家餐厅表演更现代的节目，然后在第二家餐
+                                            厅表演稍微传统一点的节目。在这两个地方，成群结队的中国游客匆匆吃饭，一边聊天一边欣赏表演。这是一个舒适的气氛和友好的人群共同存在的场地。虽然这
+                                            肯定不是传统的皮影戏，但它表演得很好看。
+                                    </blockquote>
+                                </div>
+                                <!-- // .blog-single-quate -->
+
+                                <div class="blog-single-text mt20">
+                                    <span>第二天，我经过城市边缘，去参观他们田园诗般的家乡。在这里，他们在保存完好的城镇祈祷厅里为观众表演传统节目，在他们的四合院里手工切木
+                                            偶。在这里我看到了农村的全貌。年轻一代优雅地平衡了传统形式的完整性和推动现代化的必要性之间的矛盾。村名们问我关于史蒂夫·乔布斯去世的事
+                                            (我在中国农村的时候甚至都没有听说过这个事情)，当时我正在地里种玉米。</span>
+                                </div>
+                                <!-- // .blog-single-text -->
+                                <div class="blog-single-text mt20">
+                                    <span>在我刚来这儿的日子里，很容易就能看出这些木偶是不同的。部分原因是木偶本身，主要是地理因素。
+                                            我从会议时就能感觉到对于其它地方的皮影戏表演者来说，云南的皮影戏是失败者，是被遗忘的兄弟，是害群之马。北方的皮影戏艺术家大多听说过他们，但很少有人看过，他们错了。我确信终有一天他们
+                                            一定会找到这里，感受云南皮影的魅力。</span>
+                                </div>
+
+
+
+                                <div class="blog-share ul-li mt60" style="margin-top:20px;">
+                                    <a href="{% url "profiles" %}" class="a1" style="font-size: 18px;"> <img src="{% static "image/返回.png"%}" style="width:20px;height:20px;">返回</a>
+                                </div>
+									<!-- //.blog-share -->
+								</div>
+								<!-- //.blog-single-right-side -->
+
+
+
+								<div class="blog-single-comment pt90">
+
+									<div class="comment-form-list">
+										<div class="comment-form-list-pic-text">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">山顶洞人阿里</span>
+												<span class="author-date">2019年7月15日</span>
+												<span class="author-dec">中国皮影艺术，深受国内外热爱民俗文化人士的喜爱。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+										<!-- //.comment-form-list-pic-text -->
+
+										<div class="comment-form-list-pic-text ">
+
+											<!-- //.img -->
+											<div class="author-text">
+												<span class="author-name deep-black">翠喜儿</span>
+												<span class="author-date">2019年7月20日</span>
+												<span class="author-dec">皮影是我小时候的记忆了，现在住在城市，真的是很难看到了，也只有这些老艺术家一直在坚持，我真的很怀念小时候看皮影的日子。</span>
+												<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="comment-form-list-pic-text">
+
+										<!-- //.img -->
+										<div class="author-text">
+											<span class="author-name deep-black">融小信</span>
+											<span class="author-date">2019年8月10日</span>
+											<span class="author-dec">这些皮影人偶着的太精致了，我如果能有一个就好了。</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+										</div>
+									</div>
+									<!-- //.comment-form-list-pic-text -->
+                             {% for comment in comments %}
+                                            <div class="comment-form-list-pic-text">
+                                            <span class="author-name deep-black">{{ comment.posted_by }}</span>
+											<span class="author-date">{{ comment.create_time }}</span>
+											<span class="author-dec">{{ comment.comment }}</span>
+											<span class="reply-text mt10 deep-black"><a href="#!">回复</a></span>
+                                            </div>
+                                        {% endfor %}
+									<div class="blog-single-comment-head text-capitalize  pt90">
+										<h3 class="title-head deep-black">发表你的想法</h3>
+									</div>
+
+									<div class="comment-form mt50 ">
+										  {% if user.is_authenticated %}
+                          <form method="POST" action="{% url 'comment' num %}">
+                            {% csrf_token %}
+                            <input type="text" name="comment" style="width: 800px; height: 145px;">
+                            <button type="submit" class="popin-btn" style="font-size:20px;">发表</button>
+                          </form>
+                        {% else %}
+                          <p><a href="{% url 'login' %}">登陆后</a> 发表评论</p>
+                        {% endif %}
+									</div>
+								</div>
+								<!-- //.blog-single-comment -->
+
+							</div><!--  /.col-sm-9 -->
+
+
+
+							<div class="col-sm-3">
+								<div class="blog-single-right-side-bar">
+
+									<!-- /.blog-search  -->
+
+
+
+									<!-- //.blog-single-right-side-content -->
+
+
+
+									<div class="blog-single-right-side-content mt50">
+										<div class="blog-single-side-title text-capitalize">
+											<h2 class="widgettitle deep-black">推荐阅读</h2>
+										</div>
+										<!-- //.widgettitle -->
+
+										<div class="recent-post-list mt30">
+											<div class="recent-blog-item">
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t3.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 2 %}">中国皮影戏——鲁家</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/23</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t4.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 3 %}">中国皮影戏——王燕</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/20</a> </li>
+														</ul>
+													</div>
+												</div>
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t5.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="{% url "profile" 4 %}">中国皮影戏——腾冲皮影剧团</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i> 2019/7/15</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+
+												<div class="side-tab-img-text">
+													<div class="rec-img">
+														<img src="{% static "image/t6.png"%}" alt="image">
+													</div>
+													<div class="side-tab-text ul-li">
+														<div class="rec-link">
+															<h3><a href="#">中国皮影戏——范师傅</a></h3>
+														</div>
+														<ul class="rec-nws-meta">
+															<li> <a href="#"><i class="ti-timer"></i>2019/7/3</a> </li>
+														</ul>
+													</div>
+												</div>
+												<!-- //img-text -->
+											</div>
+										</div>
+
+									</div>
+									<!-- //.blog-single-right-side-content -->
+									<!-- //.blog-single-right-side-content -->
+
+								</div>
+								<!-- //.blog-single-right-side-bar -->
+							</div>
+							<!--  /.col-sm-3 -->
+
+
+						</div><!--  /.row -->
+					</div><!-- //.blog-single-content -->
+				</div><!--  /.row -->
+			</div><!--  /.container -->
+		</section>
+	<!-- End of blog single content
+		============================================= -->
+        <script>
+                var appendNumber = 10;
+                var prependNumber = 1;
+                var swiper = new Swiper('.swiper-container', {
+                  slidesPerView: 3,
+                  centeredSlides: true,
+                  spaceBetween: 30,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                  },
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    hideOnClick: true,
+                  },
+                  virtual: {
+                    slides: (function () {
+                      var slides = [];
+                      for (var i = 2; i < 6; i += 1) {
+                        slides.push('<a href=""><img src=/static/image/pro4.'+i+'.webp></a>')
+                      }
+                      return slides;
+                    }()),
+                  },
+                  autoplay: {
+                      delay: 1000,
+                   },
+                   autoResize: false,
+
+                });
+
+
+        </script>
+</body>
+
+</html>

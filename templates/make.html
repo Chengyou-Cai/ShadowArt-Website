@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<title>中国皮影戏--制作工艺</title>
+	<link rel="stylesheet" href="{% static "css/jquery.pagepiling.css"%}">
+	<title>Document</title>
+	<link rel="stylesheet" href="{% static "css/template.css"%}">
+	<link rel="stylesheet" href="{% static "css/make.css"%}">
+	<!-- 图标 -->
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css"%}">
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css"%}">
+
+	<script type="text/javascript" src="{% static "js/jquery-1.9.1.min.js"%}"></script>
+	<script type="text/javascript" src="{% static "js/jquery.bxslider.js"%}"></script>
+
+	<link href="{% static "css/jquery.bxslider.css"%}" rel="stylesheet" type="text/css">
+	<script>
+		function showAllContent(status1,status2) {
+			document.getElementById("showLoad").style.display=status2;
+			document.getElementById("showContent").style.display=status1;
+			document.getElementById("menu").style.display="block";
+			// $("#showLoad").fadeOut(1000, go);
+			// function go() {
+			// 	$("#showContent").fadeIn(2000);
+			// 	$("#menu").fadeIn(2000);
+			// }
+		}
+	</script>
+
+
+</head>
+
+<body onload="showAllContent(' ', 'none')">
+	<div id="showLoad" style="z-index:2; display:block; width:100%; height:1050px; background-color: #fff; text-align: center; line-height: 1050px;">
+		<div style="font-size:30px; color:#777">
+			页面加载中....
+		</div>
+	</div>
+
+
+	<div id="showContent" style="z-index:1;">
+		<!-- 导航栏 -->
+		<div class="head" style="z-index:10; color: #777;">
+		<div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+			<div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+				<ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+			  {% if user.is_authenticated %}
+			  <li style="margin: 0 15px;">
+				<a href="{% url 'logout' %}">登出</a>
+			</li>
+			   {% else %}
+					 <li style="margin: 0 15px;">
+				<a href="{% url 'login' %}">登陆</a>
+			</li>
+			  {% endif %}
+          </ul>
+			</div>
+			<div class="link" style="padding: 30px 0 15px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+		</div>
+		<!-- 导航栏 -->
+		<div id="dowebok">
+			<div class="section">
+				<div class="makeContent">
+					<div class="left">
+						<div class="title">
+							<h2>皮影木偶工艺</h2>
+						</div>
+
+						<p>像大多数继承的民间艺术形式一样，大师们让制作皮影看起来很容易。这并不是他们与生俱来的天赋使他们精通于此，辛勤的工作、多年的训练和试错才能达到这样高的水平。</p>
+						<p>中国三大皮影制作的学徒向我们保证：1500年艺术团体流传下来的技能和技巧，需要用一生去掌握。对于刚接触的人来说，善良、伟大和精湛的皮影人偶的差异并不明显。但对于那些有所了解的人来说，这是显而易见的。</p>
+						<p>一个好的皮影人偶本身就是一件艺术品，但他背后的光芒真实的照射到了生活中。</p>
+					</div>
+					<div class="right">
+						<img src="{% static "image/1-1.webp"%}" alt="" class="makeImg">
+					</div>
+				</div>
+
+			</div>
+			<div class="section">
+				<div class="makeContent" style="padding:100px 0 0 0">
+					<div class="left">
+						<div class="title">
+							<h2>皮革雕刻技术</h2>
+							<h5>制造剪影</h5>
+						</div>
+
+						<p>皮革雕刻的过程是异常锋利的刀片、完美柔软的皮革和精湛的的手工之间的艰难平衡。这三个元素是精致人偶的关键元素。在一些地区，用于雕刻木偶的皮革在切割之前不会被润湿，这节省了大量的时间和研究，但却损害了最终产品。</p>
+						<p>最复杂的雕刻方法是使用推刀通过略微湿润的皮革进行最大程度的控制。完全润湿皮革的过程可以占用一半的准备时间，许多“新方法”（400-600年）通过使用更薄的皮革和拉刀或锯刀切割的方法已经被废除了。</p>
+						<p>刀具通常开始朝向设计的中心切割并向外工作。 对于那些使用推刀或拉刀方法的人，所有切口都留在原位，直到完成所有切割。 当您操纵皮革时，这可以保持工件的完整性。</p>
+						<p>因为皮革是半透明的，所以可以将印花图案放在皮革下来追踪所需的图案。专业切割机总是使用直边和弯曲的标尺来完美地评分他们的设计。</p>
+						<p>雕刻方法主要分为阳刻和阴刻二种。阳刻是将表现形体轮廓线保留下来，其余部分镂空。阳刻多用于生、旦、须生、丑的脸谱及部分装饰纹样上。阴刻是将形体轮廓线镂空。阴刻一般多用于人物的脖颈、手腕、腰端等处。雕刻皮影非常讲究刀工，技艺精湛者刀法顺逆提插，方圆相间，提转自如，注重红条，虚实相生，繁简适宜。陕西地区还流行“推皮走刀”法，即运手劲转动牛皮，以皮触刀，皮走刀不走。此外，在雕刻上还应有先后的程序。如刻人物头面，传统口诀是：先刻头帽后刻脸，眼眉刻完再刻鼻尖。</p>
+					</div>
+					<div class="right">
+						<img src="{% static "image/2-1.webp"%}" alt="" class="makeImg" style="height:450px">
+						<div class="slider3">
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-2.webp"%}"></div>
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-3.webp"%}"></div>
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-6.webp"%}"></div>
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-7.webp"%}"></div>
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-8.webp"%}"></div>
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-9webp.webp"%}"></div>
+							<div class="slide" style="width:200px; height:160px;"><img src="{% static "image/2-10.webp"%}"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="makeContent" style="padding-top:50px;">
+					<div class="left">
+						<div class="title">
+							<h2>工具&nbsp;&&nbsp;材料</h2>
+							<h5>皮革&nbsp;&&nbsp;切削工具&nbsp;&&nbsp;颜料</h5>
+						</div>
+						<small><strong>皮革</strong></small>
+						<p>各个区域传统上使用在该地区最容易获得的任何皮革。 驴和牛显然是最常见的，但也使用绵羊和水牛。 目前，由于生产所需的大量时间和精力，手工制作的牛皮越来越难以采购。 大部分皮影皮革业务已转移到机械加工行业。</p>
+						<p>刮皮是一个简单的过程，可以在连续的圆形器具中浸泡和刮擦皮革，直到它变得均匀半透明。 一些大师在寒冷的月份只使用天然来源的冷水来浸泡他们的皮革，而其他人使用自制的石灰水混合物来软化皮革并使皮毛更容易去除。</p>
+
+						<small><strong>切割工具</strong></small>
+						<p>所有地区都有自己的雕刻方法，这也体现在他们使用的工具上：
+							刀
+							打孔（带有雕刻末端的小金属棒，用于打造皮革形状）
+							木棍/木槌
+							木/蜂蜡板
+							磨刀石
+							按压石头
+							湿布
+							标尺/直边，曲线</p>
+						<small><strong>颜料​​</strong></small>
+						<p>很久以前，可以使用的颜色范围要小得多，并且依赖于该地区可用的有色矿物。 陕西地区传统上使用五色系统：红色，绿色，黑色，黄色（隐藏的天然颜色）和白色（设计中的开放切口）。 现在，颜色范围已扩大，现在包括完整的彩虹色域。</p>
+						<p>由于矿物颜料很难获得并且难以正确使用，许多木偶制造商现在使用液体水彩混合粘合剂或用漆完成，以防止出血和褪色。</p>
+						<p>中国的西南地区仍然使用附近地区（缅甸）的矿物颜料，它们的颜色比其他颜色更加生动。</p>
+					</div>
+					<div class="right">
+						<div class="lunbo">
+							<div class="slider3">
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-2.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-3.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-4.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-5.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-6.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-7.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-8.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-9.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-10.webp"%}"></div>
+								<div class="slide"style="width:200px; height:160px;"><img src="{% static "image/3-11.webp"%}"></div>
+							</div>
+						</div>
+
+						<img src="{% static "image/3-1.png"%}" style="width:100%" alt="" class="makeImg" style="height:450px">
+					</div>
+				</div>
+
+			</div>
+			<div class="section">
+				<div class="makeContent">
+					<div class="title">
+						<h2>画法</h2>
+						<h5>阴影的着色</h5>
+					</div>
+
+
+					<div class="left">
+						<div class="lunbo">
+							<div class="slider3">
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/4-2.webp"%}"></div>
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/4-3.webp"%}"></div>
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/4-4.webp"%}"></div>
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/4-5.webp"%}"></div>
+							</div>
+						</div>
+						<div class="title">
+							<h5>应用颜料</h5>
+						</div>
+						<p>绘画不仅可以创造也可以破坏完美切割的木偶。 如果没有仔细的着色，人们可能会将复杂的设计混淆在木偶中。 利用渐变，混色和强烈对比，好的绘画家可以让你在很远的地方就注意到它。 仔细观察这些照片，看看绘画过程中的各种技巧和阶段。</p>
+
+					</div>
+					<div class="right">
+						<img src="{% static "image/4-1.webp"%}" alt="" class="makeImg">
+					</div>
+				</div>
+
+			</div>
+			<div class="section">
+				<div class="makeContent">
+					<div class="title">
+						<h2>操纵</h2>
+						<h5>设计&nbsp;&&nbsp;接头&nbsp;&&nbsp;控制杆</h5>
+					</div>
+
+
+					<div class="left">
+						<div class="lunbo">
+							<div class="slider3">
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/5-2.webp"%}"></div>
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/5-3.webp"%}"></div>
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/5-4webp.webp"%}"></div>
+								<div class="slide"style="width:300px; height:150px;"><img src="{% static "image/5-5.webp"%}"></div>
+							</div>
+						</div>
+						<div class="title">
+							<h5>如何工作</h5>
+						</div>
+						<p>工程学是每个皮影人偶无形的设计伙伴。 它必须看起来正确，但它也必须
+							在实际中可用。尺寸，重量，皮革厚度，区域材料和性能
+							掌握制作过程中的所有因素。 如果仔细观察图片，你可以看到它们的
+							关节和它们的位置与我们的人类形态相关。 你看不到的是每一次切割的方式
+							在设计和轮廓的轮廓是工程，以创造一个完美的平衡，同时只有表演
+							从木偶操纵者到木偶的3根连杆。</p>
+						<p>如果您仍然很好奇，请仔细查看图片和的区域照片
+							你会开始看到关节和杆材料的多样性。</p>
+					</div>
+					<div class="right">
+						<img src="{% static "image/5-1.webp"%}" alt="" class="makeImg" style="margin-top:30px;">
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="makeContent">
+					<div class="left">
+						<div class="title">
+							<h2>手工制作&nbsp;vs&nbsp;机器制作</h2>
+							<h5>你知道它们的不同之处吗？</h5>
+						</div>
+
+						<p>虽然传统的中国皮影木偶表演一直在努力保持他们的观众，木偶
+							由于其装饰价值和美感，他们自己一直在增加粉丝的数量。 一方面，这是
+							伟大的。但是，由于我们许多人将其与廉价艺术品等同起来，所以皮影木偶也不例外。</p>
+						<p>几年前，有人发现他们可以用激光大量生产这些珍贵的木偶
+							机器，它不需要任何熟练的手工劳动。 当然，没有了解过皮影人偶的人
+							无法区分。 旅游者已经把这些机器工艺品作为一个好的纪念品。</p>
+
+						<p>虽然我对机器制造的工艺品一般没有偏见，但我确实对卖家不满意，虚假的宣传
+							，买家不知道他们刚买了什么。 通常就是这种情况。</p>
+						<p> 机器制造木偶的数量几乎消除了对熟练的木偶手艺人的需求，并且只保留了木偶
+							非常顶尖的业务主刀。 这些主切割机仍然只能在收集器领域中运行
+							因为普通的皮影无法看到差异足以保证价格上涨。</p>
+						<p>机器是用激光烧割的，他的刀头是圆的，而且发丝比较粗，花纹简单，上色一般也是简单的色，大多还是上一面，一般都染成复古色，遮盖因为机器烧割而发焦的刀口，价格便宜，现在也有一种是机器和手工结合的，一般是手工扎雪花，机器刻刀露，总的来说大多机制皮影有这些特点，复古色，做工简单。</p>
+
+					</div>
+					<div class="right5">
+						<img src="{% static "image/6-1.webp"%}" alt="" class="makeImg" style="height:500px; margin-top: 100px;">
+
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="makeContent" style="padding-top:20px;">
+					<div class="title" style="padding:10px 0">
+						<h2>皮影戏制作视频链接</h2>
+					</div>
+
+					<p style="margin-bottom:20px;"> 除了自己亲身经历以外，没有更好的方法来感受皮革雕刻工艺。 看看这三个短片，了解皮影的雕刻风格有多么不同。</p>
+					<div class="left3">
+						<div class="tu" style="margin-top:17px;">
+							<img src="{% static "image/7-1.webp"%}" alt="">
+						</div>
+						<div class="tu">
+							<img src="{% static "image/7-2.webp"%}" alt="">
+						</div>
+						<div class="tu">
+							<img src="{% static "image/7-3.webp"%}" alt="">
+						</div>
+
+					</div>
+					<div class="right7">
+						<div class="zi" style="margin-top:17px;">
+							<div class="title">
+								<h5>陕西省，华县</h5>
+							</div>
+
+							<p>这种方法是推刀雕刻方法（皮革被推到刀片上）和最难在国内掌握的皮革雕刻方法。 不要以为这个雕刻师雕刻起来很容易而觉得它和很简单！</p>
+							<br>
+							<p>链接: <a href="#"> https://youku.com/28924889</a></p>
+						</div>
+						<div class="zi">
+							<div class="title">
+								<h5>甘肃省，环县</h5>
+							</div>
+
+							<p>这个简短的剪辑显示了拉刀皮革雕刻方法（刀穿过皮革，很像纸上的精确刀）。 请注意，此雕刻师使用非常薄的皮革层，因此可以同时切割几张纸。</p>
+							<br>
+							<p>链接: <a href="#"> https://youku.com/28924611</a></p>
+						</div>
+						<div class="zi">
+							<div class="title">
+								<h5>河北省，唐山市</h5>
+							</div>
+
+							<p>在这个简短的视频中，采用了东北皮革切割方式，使用“锯”刀方法和蜂蜡切割板使刀片轻松进出。 皮革雕刻师：路天翔。</p>
+							<br>
+							<p>链接: <a href="#"> https://youku.com/26620121</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div id="menu">
+		<ul id="menu1">
+			<li data-menuanchor="page1" class="active"><a href="#page1">介绍</a></li>|
+			<li data-menuanchor="page2"><a href="#page2">雕刻</a></li>|
+			<li data-menuanchor="page3"><a href="#page3">工具</a></li>|
+			<li data-menuanchor="page4"><a href="#page4">画法</a></li>|
+			<li data-menuanchor="page5"><a href="#page5">操纵</a></li>|
+			<li data-menuanchor="page6"><a href="#page6">机器制作</a></li>|
+			<li data-menuanchor="page7"><a href="#page7">制作视频</a></li>
+		</ul>
+	</div>
+
+	<script src="{% static "js/jquery.pagepiling.min.js"%}"></script>
+	<script>
+		$(function () {
+			$('#dowebok').pagepiling({
+				sectionsColor: ['#f4f4f4', '#f4f4f4', '#f4f4f4', '#f4f4f4', '#f4f4f4', '#f4f4f4', '#f4f4f4'],
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+				menu: '#menu',
+				direction: 'horizontal'
+			});
+		});
+	</script>
+
+	<!-- <script src="../js/slider.js" type="text/javascript" charset="utf-8"></script> -->
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+
+			$('.slider3').bxSlider({
+
+				slideWidth: 200,
+
+				minSlides: 2,
+
+				maxSlides: 4,
+
+				moveSlides: 1,
+
+				slideMargin: 10
+
+			});
+
+		});
+
+	</script>
+
+
+</body>
+
+</html>

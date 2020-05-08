@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<title>中国皮影戏--人偶展示</title>
+    {% load  static %}
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- css-include -->
+	<link rel="stylesheet" href="{% static "css/template.css"%}">
+	<!-- 图标 -->
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.css"%}">
+	<link rel="stylesheet" href="{% static "font-awesome/css/font-awesome.min.css"%}">
+	<!-- boorstrap -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/bootstrap.min.css"%}">
+	<!-- themify-icon.css -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/themify-icons.css"%}">
+	<!-- owl-carousel -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css"> -->
+	<!-- light-box -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/lightbox.css"%}">
+	<!-- video css -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/video.min.css"> -->
+	<!-- menu.css -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/menu.css"> -->
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="{% static "assets/css/style.css"%}">
+	<!-- responsive.css -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"> -->
+</head>
+
+
+<body style="background-color:#f4f4f4;">
+
+	<!-- 导航栏 -->
+	<div class="head" style="z-index:1; color: #777;">
+		<div class="hd-logo" style="font-size:30px; margin: 20px 0 0 50px;">中国皮影戏</div>
+		<div class="navigation" style="padding:22px 0 17px;font-family: Martel,serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;">
+			<ul>
+
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'index' %}">历史起源</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'art' %}">艺术风格</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'profiles' %}">艺术家</a>
+              </li>
+              <li>
+                <a href="{%  url 'make' %}">制作工艺</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'puppetry' %}">人偶展示</a>
+              </li>
+              <li style="margin: 0 15px;">
+                  <a href="{% url 'videos' %}">视频赏析</a>
+              </li>
+                  <li style="margin: 0 15px;">
+                  <a href="{% url 'news' 1 %}">资讯</a>
+              </li>
+			  {% if user.is_authenticated %}
+			  <li style="margin: 0 15px;">
+				<a href="{% url 'logout' %}">登出</a>
+			</li>
+			   {% else %}
+					 <li style="margin: 0 15px;">
+				<a href="{% url 'login' %}">登陆</a>
+			</li>
+			  {% endif %}
+          </ul>
+		</div>
+		<div class="link" style="padding: 30px 0 15px;">
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope-o"></i>联系我们</a>
+      </div>
+	</div>
+	<!-- 导航栏 -->
+
+
+
+
+
+
+
+
+
+	<!-- Start of portfolio section
+		============================================= -->
+	<section id="portfolio" class="portfolio-section">
+		<div class="container">
+			<div class="row">
+				<div class="portfolio-content">
+					<div style="font-size:30px;padding: 20px 0;color: #000;">皮影人偶展示</div>
+					<div class="portfolio-tab pb55">
+						<div id="filters" class="button-group pb45">
+							<button class="tab-button active" data-filter="*">全部<span>24</span></button>
+							<button class="tab-button" data-filter=".wen">文<span>2</span></button>
+							<button class="tab-button" data-filter=".wu">武<span>7</span></button>
+							<button class="tab-button" data-filter=".dan">旦<span>3</span></button>
+							<button class="tab-button" data-filter=".wang">王<span>1</span></button>
+							<button class="tab-button" data-filter=".chi">耻<span>1</span></button>
+							<button class="tab-button" data-filter=".fan">番<span></span></button>
+							<button class="tab-button" data-filter=".shen">神<span>3</span></button>
+							<button class="tab-button" data-filter=".dao">道<span>1</span></button>
+							<button class="tab-button" data-filter=".yao">妖<span>5</span></button>
+							<button class="tab-button" data-filter=".gui">鬼<span>2</span></button>
+							<button class="tab-button" data-filter=".Wang">网<span></span></button>
+						</div>
+						<!-- /tab-button -->
+
+						<div class="portfolio-tab-text-pic row">
+							<div id="posts">
+								<div id="1" class="item item-grid yao">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x1.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x1.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-猪八戒-妖</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">又名猪刚鬣，法号悟能</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="2" class="item item-grid yao">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x3.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x3.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-孙悟空-妖</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">美猴王、齐天大圣、太乙金仙、斗战胜佛</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="3" class="item item-grid wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/s1.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/s1.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">三国演义-关羽-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">本字长生，后改字云长</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="4" class="item item-grid design wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/s8.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/s8.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">三国演义-黄忠-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字汉升，定军山斩夏侯渊</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="5" class="item item-grid design wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/s5.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/s5.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">三国演义-赵云-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字子龙，两扶幼主、扫荡西川、汉水之战</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="6" class="item item-grid wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/s3.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/s3.png"%}"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">三国演义-张飞-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字益德，当阳挡曹军、取西川、义释严颜</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+
+
+								<div id="7" class="item item-grid dao">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x2.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x2.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-唐僧-道</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">也叫唐三藏，前世为如来二弟子金蝉子</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="8" class="item item-grid shen">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x4.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x4.png"%}"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-铁扇公主-神</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">又叫罗刹女或铁扇仙，乃得道的地仙</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="9" class="item item-grid yao">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x5.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x5.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-白骨精-妖</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">又称为“白骨夫人”，是一个妖怪</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="10" class="item item-grid wen">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/m1.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/m1.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">白蛇传-许仙-文</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字汉文，又称许宣，白娘子的丈夫</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="11" class="item item-grid shen">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/m5.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/m5.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">民间传说-玉皇大帝-神</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">是道教神话传说中的天地的主宰</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="12" class="item item-grid wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/m3.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/m3.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">杨家将传-穆桂英-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">大破天门阵，出征西夏的十二名杨门女将之一</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="13" class="item item-grid wen">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/m6.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/m6.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">古代科举-状元郎-文</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">科举考试殿试第一称状元。</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="14" class="item item-grid shen">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x7.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x7.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-哪吒-神</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">中国古代神话传说人物，道教护法神</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="15" class="item item-grid yao">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/x6.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/x6.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">西游记-沙僧-妖</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">又叫沙和尚、沙悟净，护送唐僧取得真经</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="16" class="item item-grid yao dan">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/m2.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/m2.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">白蛇传-白娘子-妖、旦</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">白素贞，是一条修行千年的白蛇精</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="17" class="item item-grid wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/m4.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/m4.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">民间传说-花木兰-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">代父出征、抗击柔然，追封为孝烈将军</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="18" class="item item-grid gui">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/gui1.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/gui1.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">民间传说-阴兵-鬼</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">看守阴间的士兵</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="19" class="item item-grid wang">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/s6.jpg"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/s6.jpg"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">三国演义-刘备-王</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字玄德，夺取两川，建立蜀汉对抗曹操</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="20" class="item item-grid wu">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/s7.jpg"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/s7.jpg"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">三国演义-马超-武</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字孟起，辅助刘备建立蜀汉</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="21" class="item item-grid dan">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/dan1.jpg"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/dan1.jpg"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">四大美女-杨贵妃-旦</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">号太真，姿质丰艳，善歌舞，通音律</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="22" class="item item-grid gui">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/gui2.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/gui2.png"%}"  data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">民间传说-阴兵-鬼</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">看守阴间的士兵</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="23" class="item item-grid dan">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/dan2.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/dan2.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">红楼梦-林黛玉-旦</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">金陵十二钗正册双首之一</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+								<div id="24" class="item item-grid chi">
+									<div class="item-wrap">
+										<div class="work-item">
+											<div class="work-pic">
+												<img src="{% static "assets/img/portfolio/chi1.png"%}" alt="image">
+											</div>
+											<!-- //img -->
+											<div class="hover-content">
+												<div class="hover-text text-center">
+													<a href="{% static "assets/img/portfolio/chi1.png"%}" data-lightbox="roadtrip"><span class="ti-fullscreen"></span></a>
+												</div>
+												<!-- //light-box-img -->
+												<div class="project-description text-uppercase ul-li">
+													<h3><a href="#">宋史-蔡京-耻</a></h3>
+													<ul class="project-catagorry text-capitalize">
+														<li><a href="#">字元长，北宋宰相、书法家</a></li>
+													</ul>
+												</div>
+												<!-- //project-description -->
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<!-- /item -->
+
+
+
+
+							</div>
+							<!--//posts-->
+						</div>
+						<!--//portfolio-tab-text-pic-->
+					</div>
+					<!--//portfolio-tab-->
+
+
+
+				</div>
+				<!--//portfolio-content -->
+			</div><!--  /.row -->
+		</div><!--  /.conatiner -->
+	</section>
+	<!-- End of portfolio section
+		============================================= -->
+
+
+
+
+
+
+	<!--  Js Library -->
+	<script src="{% static "assets/js/jquery-2.1.4.min.js"%}"></script>
+	<!-- Include  for bootstrap -->
+	<script src="{% static "assets/js/bootstrap.min.js"%}"></script>
+	<!-- Include isotope Js -->
+	<script src="{% static "assets/js/jquery.isotope.min.js"%}"></script>
+	<!-- Include lightbox -->
+	<script src="{% static "assets/js/lightbox.js"%}"></script>
+	<!-- Include circle-effect.js -->
+	<!-- <script src="assets/js/circle-effect.js"></script> -->
+	<!-- Include Video js -->
+	<!-- <script src="assets/js/jquery.magnific-popup.min.js"></script> -->
+	<!-- Include Owl-carousel -->
+	<!-- <script src="assets/js/owl.carousel.min.js"></script> -->
+	<!-- Include Counter up -->
+	<!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
+	<!-- <script src="assets/js/waypoints.min.js"></script> -->
+
+
+
+	<!-- Include script.js -->
+	<script src="{% static "assets/js/script.js"%}"></script>
+
+
+</body>
+
+</html>

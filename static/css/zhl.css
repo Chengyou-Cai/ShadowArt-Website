@@ -1,0 +1,48 @@
+.daohang{
+    margin-left: 30%;
+    margin-top:20px;
+}
+
+.nav>li>a{
+    color:#222222;
+    font-size:14px;
+    font-weight:600;
+    padding:10px;
+    margin-left:20px;
+}
+.nav>li>a:hover{
+    background-color: #fff;
+}
+.nav>li>a:focus{
+    background-color:#fff;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+    background-color:#fff;
+}
+.xiala{
+    background-color:#fff;
+}
+.dropdown-menu>li>a{
+    color:#222222;
+    font-size:14px;
+    font-weight:600;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    background-color:#fff;
+    color:#222222;
+    font-size:14px;
+    font-weight:600;
+}
+.content{
+    margin-top:20px;
+    font-size:14px;
+    border:1px soild black;
+}
+.content1{
+   
+}
+#carousel img {
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
